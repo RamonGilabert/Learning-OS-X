@@ -1,6 +1,6 @@
 import Cocoa
 
-class MainWindowController: NSWindowController {
+class MainWindowController: NSWindowController, NSTextDelegate {
 
     let textFieldPassword = NSTextField()
 
@@ -27,6 +27,10 @@ class MainWindowController: NSWindowController {
     }
 
     func onGenerateButtonPressed() {
-        self.textFieldPassword.stringValue = "Button pressed"
+        self.textFieldPassword.stringValue = generateRandomString(10)
+
+        let pasteboard = NSPasteboard.generalPasteboard()
+        pasteboard.clearContents()
+        pasteboard.writeObjects([self.textFieldPassword.stringValue])
     }
 }
