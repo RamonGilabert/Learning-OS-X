@@ -4,4 +4,4 @@ This was one of my goals since I bought the first Mac, so today, a cloudy sunday
 
 ### Random password generator
 
-![Random password generator](https://github.com/RamonGilabert/RamonGilabert/blob/master/Resources/screenshots.png)
+![Random password generator](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/first-app.png)
