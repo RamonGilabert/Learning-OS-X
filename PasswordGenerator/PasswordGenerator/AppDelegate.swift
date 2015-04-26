@@ -3,10 +3,12 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
+    var mainWindowController: MainWindowController?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
+        let mainWindowController = MainWindowController(windowNibName: "MainWindowController")
+        mainWindowController.showWindow(self)
+        self.mainWindowController = mainWindowController
     }
 }
 
