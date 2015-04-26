@@ -14,6 +14,11 @@ class MainWindowController: NSWindowController {
         self.window!.contentView.addSubview(buttonGenerate)
 
         let textFieldPassword = NSTextField(frame: NSMakeRect((self.window!.contentView.frame.width - 300)/2, self.window!.contentView.frame.height - 175, 300, 50))
+        textFieldPassword.placeholderString = "Tap generate password"
+        textFieldPassword.font = NSFont(name: "AvenirNext-Regular", size: 22)
+        textFieldPassword.alignment = NSTextAlignment.CenterTextAlignment
+        textFieldPassword.editable = false
+        textFieldPassword.selectable = true
         self.window!.contentView.addSubview(textFieldPassword)
     }
 }
