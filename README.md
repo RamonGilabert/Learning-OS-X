@@ -5,3 +5,10 @@ This was one of my goals since I bought the first Mac, so today, a cloudy sunday
 ### Random password generator
 
 ![Random password generator](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/first-app.png)
+
+###### Featuring
+
+- Random string of characters and numbers.
+- Views added programmatically.
+- Copy to clipboard the new generated password.
+- Notification center to show banners.
