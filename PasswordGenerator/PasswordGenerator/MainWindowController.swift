@@ -4,6 +4,10 @@ class MainWindowController: NSWindowController, NSUserNotificationCenterDelegate
 
     let textFieldPassword = NSTextField()
 
+    override var windowNibName: String? {
+        return "MainWindowController"
+    }
+
     override func windowDidLoad() {
         super.windowDidLoad()
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F6C1641B1AED3144008FED64 /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1641A1AED3144008FED64 /* RandomGenerator.swift */; };
+		F6C1641D1AED3A8E008FED64 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1641C1AED3A8E008FED64 /* ViewModel.swift */; };
 		F6DB9A791AED07B400F77872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB9A781AED07B400F77872 /* AppDelegate.swift */; };
 		F6DB9A7B1AED07B400F77872 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DB9A7A1AED07B400F77872 /* Images.xcassets */; };
 		F6DB9A7E1AED07B400F77872 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6DB9A7C1AED07B400F77872 /* MainMenu.xib */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		F6C1641A1AED3144008FED64 /* RandomGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		F6C1641C1AED3A8E008FED64 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F6DB9A731AED07B400F77872 /* PasswordGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DB9A771AED07B400F77872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6DB9A781AED07B400F77872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6C1641E1AED3A96008FED64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6DB9A7A1AED07B400F77872 /* Images.xcassets */,
+				F6DB9A7C1AED07B400F77872 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F6DB9A6A1AED07B400F77872 = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +93,9 @@
 				F6DB9A781AED07B400F77872 /* AppDelegate.swift */,
 				F6DB9A931AED07D300F77872 /* MainWindowController.swift */,
 				F6DB9A941AED07D300F77872 /* MainWindowController.xib */,
+				F6C1641C1AED3A8E008FED64 /* ViewModel.swift */,
 				F6C1641A1AED3144008FED64 /* RandomGenerator.swift */,
-				F6DB9A7A1AED07B400F77872 /* Images.xcassets */,
-				F6DB9A7C1AED07B400F77872 /* MainMenu.xib */,
+				F6C1641E1AED3A96008FED64 /* Resources */,
 				F6DB9A761AED07B400F77872 /* Supporting Files */,
 			);
 			path = PasswordGenerator;
@@ -217,6 +228,7 @@
 			files = (
 				F6DB9A951AED07D300F77872 /* MainWindowController.swift in Sources */,
 				F6DB9A791AED07B400F77872 /* AppDelegate.swift in Sources */,
+				F6C1641D1AED3A8E008FED64 /* ViewModel.swift in Sources */,
 				F6C1641B1AED3144008FED64 /* RandomGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
