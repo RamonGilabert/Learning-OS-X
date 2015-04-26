@@ -11,6 +11,7 @@
 		F6DB9A4A1AED004500F77872 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DB9A491AED004500F77872 /* Images.xcassets */; };
 		F6DB9A4D1AED004500F77872 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6DB9A4B1AED004500F77872 /* MainMenu.xib */; };
 		F6DB9A591AED004500F77872 /* PasswordGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB9A581AED004500F77872 /* PasswordGeneratorTests.swift */; };
+		F6DB9A631AED014900F77872 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB9A621AED014900F77872 /* MainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		F6DB9A521AED004500F77872 /* PasswordGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DB9A571AED004500F77872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6DB9A581AED004500F77872 /* PasswordGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorTests.swift; sourceTree = "<group>"; };
+		F6DB9A621AED014900F77872 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DB9A471AED004500F77872 /* AppDelegate.swift */,
+				F6DB9A621AED014900F77872 /* MainWindowController.swift */,
 				F6DB9A491AED004500F77872 /* Images.xcassets */,
 				F6DB9A4B1AED004500F77872 /* MainMenu.xib */,
 				F6DB9A451AED004500F77872 /* Supporting Files */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DB9A631AED014900F77872 /* MainWindowController.swift in Sources */,
 				F6DB9A481AED004500F77872 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
