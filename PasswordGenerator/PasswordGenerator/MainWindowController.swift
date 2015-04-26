@@ -6,5 +6,4 @@ class MainWindowController: NSWindowController {
         super.windowDidLoad()
 
     }
-
 }
