@@ -11,6 +11,8 @@
 		F6C164301AED430B008FED64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C1642F1AED430B008FED64 /* Images.xcassets */; };
 		F6C164331AED430B008FED64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C164311AED430B008FED64 /* MainMenu.xib */; };
 		F6C1643F1AED430B008FED64 /* RGBColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1643E1AED430B008FED64 /* RGBColorTests.swift */; };
+		F6C1644D1AED43F2008FED64 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1644B1AED43F2008FED64 /* MainWindowController.swift */; };
+		F6C1644E1AED43F2008FED64 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C1644C1AED43F2008FED64 /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		F6C164381AED430B008FED64 /* RGBColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGBColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C1643D1AED430B008FED64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C1643E1AED430B008FED64 /* RGBColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColorTests.swift; sourceTree = "<group>"; };
+		F6C1644B1AED43F2008FED64 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		F6C1644C1AED43F2008FED64 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				F6C1642D1AED430B008FED64 /* AppDelegate.swift */,
+				F6C1644B1AED43F2008FED64 /* MainWindowController.swift */,
+				F6C1644C1AED43F2008FED64 /* MainWindowController.xib */,
 				F6C164481AED4317008FED64 /* Resources */,
 				F6C1642B1AED430B008FED64 /* Supporting Files */,
 			);
@@ -195,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C164301AED430B008FED64 /* Images.xcassets in Resources */,
+				F6C1644E1AED43F2008FED64 /* MainWindowController.xib in Resources */,
 				F6C164331AED430B008FED64 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C1644D1AED43F2008FED64 /* MainWindowController.swift in Sources */,
 				F6C1642E1AED430B008FED64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
