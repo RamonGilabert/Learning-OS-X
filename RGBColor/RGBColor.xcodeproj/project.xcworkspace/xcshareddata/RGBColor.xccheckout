@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>11F8408B-273C-4504-861E-24C6871560BE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>RGBColor</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3883F9E35E374A24E0BED88687472EB96D5A7200</key>
 		<string>https://github.com/RamonGilabert/Learning-OS-X.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RGBColor/RGBColor.xcodeproj/project.xcworkspace</string>
+	<string>RGBColor/RGBColor.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3883F9E35E374A24E0BED88687472EB96D5A7200</key>
