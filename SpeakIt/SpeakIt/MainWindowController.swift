@@ -4,6 +4,8 @@ class MainWindowController: NSWindowController {
 
     let textField = NSTextField()
     let speechSynth = NSSpeechSynthesizer()
+    let speakItButton = NSButton()
+    let stopItButton = NSButton()
 
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -12,19 +14,21 @@ class MainWindowController: NSWindowController {
         self.textField.placeholderString = "Enter the text you want the computer to say to you"
         self.window!.contentView.addSubview(self.textField)
 
-        let speakItButton = NSButton(frame: NSMakeRect(self.window!.contentView.frame.width - 82.5, self.textField.frame.origin.y - 37.5, 75, 20))
-        speakItButton.title = "Speak it"
-        speakItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
-        speakItButton.target = self
-        speakItButton.action = "onSpeakItButtonPressed"
-        self.window!.contentView.addSubview(speakItButton)
+        self.speakItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 82.5, self.textField.frame.origin.y - 37.5, 75, 20)
+        self.speakItButton.title = "Speak it"
+        self.speakItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        self.speakItButton.target = self
+        self.speakItButton.action = "onSpeakItButtonPressed"
+        self.window!.contentView.addSubview(self.speakItButton)
 
-        let stopItButton = NSButton(frame: NSMakeRect(self.window!.contentView.frame.width - 155, self.textField.frame.origin.y - 37.5, 75, 20))
-        stopItButton.title = "Stop it"
-        stopItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
-        stopItButton.target = self
-        stopItButton.action = "onStopButtonPressed"
-        self.window!.contentView.addSubview(stopItButton)
+        self.stopItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 155, self.textField.frame.origin.y - 37.5, 75, 20)
+        self.stopItButton.title = "Stop it"
+        self.stopItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        self.stopItButton.target = self
+        self.stopItButton.action = "onStopButtonPressed"
+        self.window!.contentView.addSubview(self.stopItButton)
+
+        updateButtons()
     }
 
     // MARK: Action handlers
@@ -40,17 +44,27 @@ class MainWindowController: NSWindowController {
         } else {
             self.speechSynth.startSpeakingString(self.textField.stringValue)
         }
+
+        updateButtons()
     }
 
     func onStopButtonPressed() {
         if self.speechSynth.speaking {
             self.speechSynth.stopSpeaking()
         }
+
+        updateButtons()
     }
 
     // MARK: Helper methods
 
     func updateButtons() {
-        
+        if self.speechSynth.speaking {
+            self.stopItButton.enabled = true
+            self.speakItButton.enabled = false
+        } else {
+            self.stopItButton.enabled = false
+            self.speakItButton.enabled = true
+        }
     }
 }
