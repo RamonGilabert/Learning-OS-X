@@ -24,6 +24,8 @@ This was one of my goals since I bought the first Mac, so today, a cloudy sunday
 - Update the color well everytime you use the slider.
 - Notification center to show banners.
 
+### Speak what I write
+
 ![Color well](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/third-app.png)
 
 ###### Featuring
