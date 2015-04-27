@@ -6,12 +6,15 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate {
     let speechSynth = NSSpeechSynthesizer()
     let speakItButton = NSButton()
     let stopItButton = NSButton()
+    var isSpeaking = false
 
     override func windowDidLoad() {
         super.windowDidLoad()
 
         self.window!.title = "Speaking it"
         self.window!.backgroundColor = NSColor(calibratedHue:0.02, saturation:0.67, brightness:0.87, alpha:1)
+
+        self.speechSynth.delegate = self
 
         self.textField.frame = NSMakeRect(15, self.window!.contentView.frame.height - 215, self.window!.contentView.frame.width - 30, 100)
         self.textField.placeholderString = "Enter the text you want the computer to say to you"
@@ -46,29 +49,30 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate {
             alertNoText.runModal()
         } else {
             self.speechSynth.startSpeakingString(self.textField.stringValue)
+            self.isSpeaking = true
+            updateButtons()
         }
-
-        updateButtons()
     }
 
     func onStopButtonPressed() {
-        if self.speechSynth.speaking {
+        if self.isSpeaking {
             self.speechSynth.stopSpeaking()
+            self.isSpeaking = false
+            updateButtons()
         }
-
-        updateButtons()
     }
 
     // MARK: NSSpeechSynthesizer delegate methods
 
     func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
+        self.isSpeaking = false
         updateButtons()
     }
 
     // MARK: Helper methods
 
     func updateButtons() {
-        if self.speechSynth.speaking {
+        if self.isSpeaking {
             self.stopItButton.enabled = true
             self.speakItButton.enabled = false
         } else {
