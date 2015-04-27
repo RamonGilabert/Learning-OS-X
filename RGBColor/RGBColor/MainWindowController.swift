@@ -1,6 +1,6 @@
 import Cocoa
 
-class MainWindowController: NSWindowController {
+class MainWindowController: NSWindowController, NSUserNotificationCenterDelegate {
 
     let redSlider = NSSlider()
     let greenSlider = NSSlider()
@@ -16,7 +16,7 @@ class MainWindowController: NSWindowController {
 
         self.window!.title = "Color"
 
-        self.redSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 40, 150, 50)
+        self.redSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 50, 150, 50)
         self.redSlider.minValue = 0.0
         self.redSlider.maxValue = 1.0
         self.redSlider.target = self
@@ -34,7 +34,7 @@ class MainWindowController: NSWindowController {
         redLabel.drawsBackground = false
         self.window!.contentView.addSubview(redLabel)
 
-        self.greenSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 140, 150, 50)
+        self.greenSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 100, 150, 50)
         self.greenSlider.minValue = 0.0
         self.greenSlider.maxValue = 1.0
         self.greenSlider.action = "onSliderMoved"
@@ -51,7 +51,7 @@ class MainWindowController: NSWindowController {
         greenLabel.drawsBackground = false
         self.window!.contentView.addSubview(greenLabel)
 
-        self.blueSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 240, 150, 50)
+        self.blueSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 150, 150, 50)
         self.blueSlider.minValue = 0.0
         self.blueSlider.maxValue = 1.0
         self.blueSlider.action = "onSliderMoved"
@@ -73,11 +73,31 @@ class MainWindowController: NSWindowController {
         self.colorWell.enabled = false
         self.colorWell.color = NSColor(calibratedRed: CGFloat(self.redSlider.floatValue), green: CGFloat(self.greenSlider.floatValue), blue: CGFloat(self.blueSlider.floatValue), alpha: 1.0)
         self.window!.contentView.addSubview(self.colorWell)
+
+        let colorButton = NSButton(frame: NSMakeRect(self.redSlider.frame.origin.x - 10, self.blueSlider.frame.origin.y - 75, 165, 50))
+        colorButton.target = self
+        colorButton.action = "onGetColorButtonPressed"
+        colorButton.title = "Get color"
+        colorButton.bezelStyle = NSBezelStyle.RegularSquareBezelStyle
+        self.window!.contentView.addSubview(colorButton)
     }
 
     // MARK: Slider methods
 
     func onSliderMoved() {
         self.colorWell.color = NSColor(calibratedRed: CGFloat(self.redSlider.floatValue), green: CGFloat(self.greenSlider.floatValue), blue: CGFloat(self.blueSlider.floatValue), alpha: 1.0)
+    }
+
+    // MARK: Button methods
+
+    func onGetColorButtonPressed() {
+        let pasteboard = NSPasteboard.generalPasteboard()
+        pasteboard.clearContents()
+        pasteboard.setString(String(format: "NSColor(calibratedRed: %.2f, green: %.2f, blue: %.2f, alpha: 1.0)", self.redSlider.floatValue, self.greenSlider.floatValue, self.blueSlider.floatValue), forType: NSStringPboardType)
+
+        let notification = NSUserNotification()
+        notification.title = "Color copied"
+        notification.informativeText = "Your color has been copied to your clipboard"
+        notification.
     }
 }
