@@ -13,6 +13,7 @@
 		F6C1643F1AED430B008FED64 /* RGBColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1643E1AED430B008FED64 /* RGBColorTests.swift */; };
 		F6C1644D1AED43F2008FED64 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1644B1AED43F2008FED64 /* MainWindowController.swift */; };
 		F6C1644E1AED43F2008FED64 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C1644C1AED43F2008FED64 /* MainWindowController.xib */; };
+		F6C164501AEE4249008FED64 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1644F1AEE4249008FED64 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F6C1643E1AED430B008FED64 /* RGBColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColorTests.swift; sourceTree = "<group>"; };
 		F6C1644B1AED43F2008FED64 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		F6C1644C1AED43F2008FED64 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		F6C1644F1AEE4249008FED64 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				F6C1642D1AED430B008FED64 /* AppDelegate.swift */,
 				F6C1644B1AED43F2008FED64 /* MainWindowController.swift */,
 				F6C1644C1AED43F2008FED64 /* MainWindowController.xib */,
+				F6C1644F1AEE4249008FED64 /* ViewModel.swift */,
 				F6C164481AED4317008FED64 /* Resources */,
 				F6C1642B1AED430B008FED64 /* Supporting Files */,
 			);
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C1644D1AED43F2008FED64 /* MainWindowController.swift in Sources */,
+				F6C164501AEE4249008FED64 /* ViewModel.swift in Sources */,
 				F6C1642E1AED430B008FED64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +416,7 @@
 				F6C164441AED430B008FED64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6C164451AED430B008FED64 /* Build configuration list for PBXNativeTarget "RGBColorTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				F6C164471AED430B008FED64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
