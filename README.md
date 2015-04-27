@@ -12,3 +12,14 @@ This was one of my goals since I bought the first Mac, so today, a cloudy sunday
 - Views added programmatically.
 - Copy to clipboard the new generated password.
 - Notification center to show banners.
+
+### Color well
+
+![Color well](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/second-app.png)
+
+###### Featuring
+
+- Copy any color to your clipboard.
+- Listen to the sliders.
+- Update the color well everytime you use the slider
+- Notification center to show banners.
