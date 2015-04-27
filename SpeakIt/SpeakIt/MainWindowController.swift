@@ -17,18 +17,15 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
 
         self.speechSynth.delegate = self
 
-        self.textField.frame = NSMakeRect(15, self.window!.contentView.frame.height - 215, self.window!.contentView.frame.width - 30, 100)
         self.textField.placeholderString = "Enter the text you want the computer to say to you"
         self.window!.contentView.addSubview(self.textField)
 
-        self.speakItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 82.5, self.textField.frame.origin.y - 37.5, 75, 20)
         self.speakItButton.title = "Speak it"
         self.speakItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.speakItButton.target = self
         self.speakItButton.action = "onSpeakItButtonPressed"
         self.window!.contentView.addSubview(self.speakItButton)
 
-        self.stopItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 155, self.textField.frame.origin.y - 37.5, 75, 20)
         self.stopItButton.title = "Stop it"
         self.stopItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.stopItButton.target = self
@@ -74,6 +71,12 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
 
     func windowShouldClose(sender: AnyObject) -> Bool {
         return !self.isSpeaking
+    }
+
+    func windowDidResize(notification: NSNotification) {
+        self.textField.frame = NSMakeRect(15, self.window!.contentView.frame.height - 115, self.window!.contentView.frame.width - 30, 100)
+        self.speakItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 82.5, self.textField.frame.origin.y - 40, 75, 25)
+        self.stopItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 155, self.textField.frame.origin.y - 40, 75, 25)
     }
 
     // MARK: Helper methods
