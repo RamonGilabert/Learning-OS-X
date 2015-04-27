@@ -21,5 +21,13 @@ This was one of my goals since I bought the first Mac, so today, a cloudy sunday
 
 - Copy any color to your clipboard.
 - Listen to the sliders.
-- Update the color well everytime you use the slider
+- Update the color well everytime you use the slider.
 - Notification center to show banners.
+
+![Color well](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/third-app.png)
+
+###### Featuring
+
+- Write text and listen it from your computer
+- All the views set programmatically.
+- Update buttons listening the delegate.
