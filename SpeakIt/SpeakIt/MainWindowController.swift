@@ -10,6 +10,9 @@ class MainWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
 
+        self.window!.title = "Speaking it"
+        self.window!.backgroundColor = NSColor(calibratedHue:0.02, saturation:0.67, brightness:0.87, alpha:1)
+
         self.textField.frame = NSMakeRect(15, self.window!.contentView.frame.height - 215, self.window!.contentView.frame.width - 30, 100)
         self.textField.placeholderString = "Enter the text you want the computer to say to you"
         self.window!.contentView.addSubview(self.textField)
