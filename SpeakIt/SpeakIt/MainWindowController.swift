@@ -1,6 +1,6 @@
 import Cocoa
 
-class MainWindowController: NSWindowController {
+class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate {
 
     let textField = NSTextField()
     let speechSynth = NSSpeechSynthesizer()
@@ -56,6 +56,12 @@ class MainWindowController: NSWindowController {
             self.speechSynth.stopSpeaking()
         }
 
+        updateButtons()
+    }
+
+    // MARK: NSSpeechSynthesizer delegate methods
+
+    func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
         updateButtons()
     }
 
