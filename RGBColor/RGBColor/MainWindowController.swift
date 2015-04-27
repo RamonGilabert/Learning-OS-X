@@ -22,19 +22,8 @@ class MainWindowController: NSWindowController, NSUserNotificationCenterDelegate
         self.redSlider = self.viewModel.setLabelAndSlider(self, view: self.window!.contentView as! NSView, text: "R", yValue: 1)
         self.greenSlider = self.viewModel.setLabelAndSlider(self, view: self.window!.contentView as! NSView, text: "G", yValue: 2)
         self.blueSlider = self.viewModel.setLabelAndSlider(self, view: self.window!.contentView as! NSView, text: "B", yValue: 3)
-
-        self.colorWell.frame = NSMakeRect(15, 15, self.window!.contentView.frame.width - 225, self.window!.contentView.frame.height)
-        self.colorWell.bordered = true
-        self.colorWell.enabled = false
-        self.colorWell.color = NSColor(calibratedRed: CGFloat(self.redSlider.floatValue), green: CGFloat(self.greenSlider.floatValue), blue: CGFloat(self.blueSlider.floatValue), alpha: 1.0)
-        self.window!.contentView.addSubview(self.colorWell)
-
-        let colorButton = NSButton(frame: NSMakeRect(self.redSlider.frame.origin.x - 10, self.blueSlider.frame.origin.y - 75, 165, 50))
-        colorButton.target = self
-        colorButton.action = "onGetColorButtonPressed"
-        colorButton.title = "Get color"
-        colorButton.bezelStyle = NSBezelStyle.RegularSquareBezelStyle
-        self.window!.contentView.addSubview(colorButton)
+        self.colorWell = self.viewModel.setColorWell(self.window!.contentView as! NSView)
+        self.viewModel.setButtonInView(self, view: self.window!.contentView as! NSView)
     }
 
     // MARK: Slider methods
