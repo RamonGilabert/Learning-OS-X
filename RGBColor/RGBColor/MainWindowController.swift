@@ -16,7 +16,7 @@ class MainWindowController: NSWindowController {
 
         self.window!.title = "Color"
 
-        self.redSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height, 150, 50)
+        self.redSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 40, 150, 50)
         self.redSlider.minValue = 0.0
         self.redSlider.maxValue = 1.0
         self.window!.contentView.addSubview(self.redSlider)
@@ -32,7 +32,7 @@ class MainWindowController: NSWindowController {
         redLabel.drawsBackground = false
         self.window!.contentView.addSubview(redLabel)
 
-        self.greenSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 100, 150, 50)
+        self.greenSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 140, 150, 50)
         self.greenSlider.minValue = 0.0
         self.greenSlider.maxValue = 1.0
         self.window!.contentView.addSubview(self.greenSlider)
@@ -48,7 +48,7 @@ class MainWindowController: NSWindowController {
         greenLabel.drawsBackground = false
         self.window!.contentView.addSubview(greenLabel)
 
-        self.blueSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 200, 150, 50)
+        self.blueSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 240, 150, 50)
         self.blueSlider.minValue = 0.0
         self.blueSlider.maxValue = 1.0
         self.window!.contentView.addSubview(self.blueSlider)
@@ -63,6 +63,10 @@ class MainWindowController: NSWindowController {
         blueLabel.bezeled = false
         blueLabel.bordered = false
         self.window!.contentView.addSubview(blueLabel)
+
+        self.colorWell.frame = NSMakeRect(15, 15, self.window!.contentView.frame.width - 225, self.window!.contentView.frame.height)
+        self.colorWell.bordered = true
+        self.window!.contentView.addSubview(self.colorWell)
     }
     
 }
