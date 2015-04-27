@@ -1,6 +1,6 @@
 import Cocoa
 
-class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate {
+class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSWindowDelegate {
 
     let textField = NSTextField()
     let speechSynth = NSSpeechSynthesizer()
@@ -13,6 +13,7 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate {
 
         self.window!.title = "Speaking it"
         self.window!.backgroundColor = NSColor(calibratedHue:0.02, saturation:0.67, brightness:0.87, alpha:1)
+        self.window!.delegate = self
 
         self.speechSynth.delegate = self
 
@@ -67,6 +68,12 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate {
     func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
         self.isSpeaking = false
         updateButtons()
+    }
+
+    // MARK: NSWindow delegate methods
+
+    func windowShouldClose(sender: AnyObject) -> Bool {
+        return !self.isSpeaking
     }
 
     // MARK: Helper methods
