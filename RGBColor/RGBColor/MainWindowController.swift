@@ -16,6 +16,8 @@ class MainWindowController: NSWindowController, NSUserNotificationCenterDelegate
 
         self.window!.title = "Color"
 
+        NSUserNotificationCenter.defaultUserNotificationCenter().delegate = self
+
         self.redSlider.frame = NSMakeRect(self.window!.contentView.frame.width - 175, self.window!.contentView.frame.height - 50, 150, 50)
         self.redSlider.minValue = 0.0
         self.redSlider.maxValue = 1.0
@@ -98,6 +100,14 @@ class MainWindowController: NSWindowController, NSUserNotificationCenterDelegate
         let notification = NSUserNotification()
         notification.title = "Color copied"
         notification.informativeText = "Your color has been copied to your clipboard"
-        notification.
+        notification.soundName = NSUserNotificationDefaultSoundName
+
+        NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
+    }
+
+    // MARK: Notification delegate
+
+    func userNotificationCenter(center: NSUserNotificationCenter, shouldPresentNotification notification: NSUserNotification) -> Bool {
+        return true
     }
 }
