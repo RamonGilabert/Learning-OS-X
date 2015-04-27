@@ -3,6 +3,7 @@ import Cocoa
 class MainWindowController: NSWindowController {
 
     let textField = NSTextField()
+    let speechSynth = NSSpeechSynthesizer()
 
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -29,10 +30,27 @@ class MainWindowController: NSWindowController {
     // MARK: Action handlers
 
     func onSpeakItButtonPressed() {
-
+        if self.textField.stringValue.isEmpty {
+            let alertNoText = NSAlert()
+            alertNoText.messageText = "There's no text!"
+            alertNoText.informativeText = "Write some in the text field and I'll speak it!"
+            alertNoText.alertStyle = NSAlertStyle.WarningAlertStyle
+            alertNoText.addButtonWithTitle("OK")
+            alertNoText.runModal()
+        } else {
+            self.speechSynth.startSpeakingString(self.textField.stringValue)
+        }
     }
 
-    func onStopItButtonPressed() {
+    func onStopButtonPressed() {
+        if self.speechSynth.speaking {
+            self.speechSynth.stopSpeaking()
+        }
+    }
 
+    // MARK: Helper methods
+
+    func updateButtons() {
+        
     }
 }
