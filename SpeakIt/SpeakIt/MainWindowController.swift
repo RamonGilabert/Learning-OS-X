@@ -26,6 +26,7 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
 
         let firstColumn = NSTableColumn(identifier: "firstColumn")
         firstColumn.width = self.tableView.frame.width
+        firstColumn.title = "Voices"
         self.tableView.addTableColumn(firstColumn)
         self.scrollView.documentView = self.tableView
 
