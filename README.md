@@ -26,10 +26,20 @@ This was one of my goals since I bought the first Mac, so today, a cloudy sunday
 
 ### Speak what I write
 
-![Color well](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/third-app.png)
+![Speak it](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/third-app.png)
 
 ###### Featuring
 
 - Write text and listen it from your computer
 - All the views set programmatically.
 - Update buttons listening the delegate.
+
+### Doing it
+
+![ToDo app](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/third-app.png)
+
+###### Featuring
+
+- NSTableView programmatically in Swift.
+- Configure an NSTableView dynamically.
+- Resizing the window doesn't destroy the view.
