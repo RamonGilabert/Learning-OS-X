@@ -11,7 +11,6 @@
 		F69AC7111AEEA9F000D2BA70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69AC7101AEEA9F000D2BA70 /* Images.xcassets */; };
 		F69AC7141AEEA9F000D2BA70 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69AC7121AEEA9F000D2BA70 /* MainMenu.xib */; };
 		F69AC7201AEEA9F000D2BA70 /* SpeakItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AC71F1AEEA9F000D2BA70 /* SpeakItTests.swift */; };
-		F69AC72B1AEEAA1500D2BA70 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AC7291AEEAA1500D2BA70 /* MainWindowController.swift */; };
 		F69AC72C1AEEAA1500D2BA70 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69AC72A1AEEAA1500D2BA70 /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		F69AC7191AEEA9F000D2BA70 /* SpeakItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69AC71E1AEEA9F000D2BA70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F69AC71F1AEEA9F000D2BA70 /* SpeakItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakItTests.swift; sourceTree = "<group>"; };
-		F69AC7291AEEAA1500D2BA70 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		F69AC72A1AEEAA1500D2BA70 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				F69AC70E1AEEA9F000D2BA70 /* AppDelegate.swift */,
-				F69AC7291AEEAA1500D2BA70 /* MainWindowController.swift */,
 				F69AC72A1AEEAA1500D2BA70 /* MainWindowController.xib */,
 				F69AC72D1AEEAA2800D2BA70 /* Resources */,
 				F69AC70C1AEEA9F000D2BA70 /* Supporting Files */,
@@ -220,7 +217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F69AC72B1AEEAA1500D2BA70 /* MainWindowController.swift in Sources */,
 				F69AC70F1AEEA9F000D2BA70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +408,7 @@
 				F69AC7251AEEA9F000D2BA70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F69AC7261AEEA9F000D2BA70 /* Build configuration list for PBXNativeTarget "SpeakItTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +417,7 @@
 				F69AC7281AEEA9F000D2BA70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
