@@ -36,7 +36,7 @@ This was one of my goals since I bought the first Mac, so today, a cloudy sunday
 
 ### Doing it
 
-![ToDo app](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/third-app.png)
+![ToDo app](https://github.com/RamonGilabert/Learning-OS-X/blob/master/Resources/fourth-app.png)
 
 ###### Featuring
 
