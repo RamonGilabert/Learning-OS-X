@@ -1,11 +1,12 @@
 import Cocoa
 
-class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSWindowDelegate {
+class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSWindowDelegate, NSTableViewDelegate, NSTableViewDataSource {
 
     let textField = NSTextField()
     let speechSynth = NSSpeechSynthesizer()
     let speakItButton = NSButton()
     let stopItButton = NSButton()
+    let tableView = NSTableView()
     var isSpeaking = false
 
     override func windowDidLoad() {
@@ -15,10 +16,12 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
         self.window!.backgroundColor = NSColor(calibratedHue:0.02, saturation:0.67, brightness:0.87, alpha:1)
         self.window!.delegate = self
 
-        self.speechSynth.delegate = self
-
         self.textField.placeholderString = "Enter the text you want the computer to say to you"
         self.window!.contentView.addSubview(self.textField)
+
+        self.speechSynth.delegate = self
+//        self.tableView.setDelegate(self)
+//        self.tableView.setDataSource(self)
 
         self.speakItButton.title = "Speak it"
         self.speakItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
@@ -60,6 +63,16 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
         }
     }
 
+    // MARK: TableView delegate methods
+
+//    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+//        return NSSpeechSynthesizer.availableVoices()!.count
+//    }
+//
+//    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+//
+//    }
+
     // MARK: NSSpeechSynthesizer delegate methods
 
     func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
@@ -74,9 +87,10 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
     }
 
     func windowDidResize(notification: NSNotification) {
-        self.textField.frame = NSMakeRect(15, self.window!.contentView.frame.height - 115, self.window!.contentView.frame.width - 30, 100)
-        self.speakItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 82.5, self.textField.frame.origin.y - 40, 75, 25)
-        self.stopItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 155, self.textField.frame.origin.y - 40, 75, 25)
+        self.textField.frame = NSMakeRect(15, self.window!.contentView.frame.height - 15 - (self.window!.contentView.frame.height / 1.75), self.window!.contentView.frame.width - 230, self.window!.contentView.frame.height / 1.75)
+        self.tableView.frame = NSMakeRect(self.textField.frame.width + 15, self.window!.contentView.frame.height - 15 - (self.window!.contentView.frame.height / 1.75), self.window!.contentView.frame.width - self.textField.frame.width - 30, self.window!.contentView.frame.height / 1.75)
+        self.speakItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 82.5, self.textField.frame.origin.y - 65, 75, 25)
+        self.stopItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 155, self.textField.frame.origin.y - 65, 75, 25)
     }
 
     // MARK: Helper methods
@@ -90,4 +104,6 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
             self.speakItButton.enabled = true
         }
     }
+
+    func getTheString
 }
