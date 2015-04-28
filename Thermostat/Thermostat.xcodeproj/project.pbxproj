@@ -11,6 +11,8 @@
 		F6E32C021AEFF1880064D322 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E32C011AEFF1880064D322 /* Images.xcassets */; };
 		F6E32C051AEFF1880064D322 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E32C031AEFF1880064D322 /* MainMenu.xib */; };
 		F6E32C111AEFF1880064D322 /* ThermostatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E32C101AEFF1880064D322 /* ThermostatTests.swift */; };
+		F6E32C1C1AEFF1B90064D322 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E32C1A1AEFF1B90064D322 /* MainWindowController.swift */; };
+		F6E32C1D1AEFF1B90064D322 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E32C1B1AEFF1B90064D322 /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		F6E32C0A1AEFF1880064D322 /* ThermostatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThermostatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E32C0F1AEFF1880064D322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E32C101AEFF1880064D322 /* ThermostatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermostatTests.swift; sourceTree = "<group>"; };
+		F6E32C1A1AEFF1B90064D322 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		F6E32C1B1AEFF1B90064D322 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				F6E32BFF1AEFF1880064D322 /* AppDelegate.swift */,
+				F6E32C1A1AEFF1B90064D322 /* MainWindowController.swift */,
+				F6E32C1B1AEFF1B90064D322 /* MainWindowController.xib */,
 				F6E32C011AEFF1880064D322 /* Images.xcassets */,
-				F6E32C031AEFF1880064D322 /* MainMenu.xib */,
 				F6E32BFD1AEFF1880064D322 /* Supporting Files */,
 			);
 			path = Thermostat;
@@ -84,6 +89,7 @@
 		F6E32BFD1AEFF1880064D322 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6E32C031AEFF1880064D322 /* MainMenu.xib */,
 				F6E32BFE1AEFF1880064D322 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -187,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E32C021AEFF1880064D322 /* Images.xcassets in Resources */,
+				F6E32C1D1AEFF1B90064D322 /* MainWindowController.xib in Resources */,
 				F6E32C051AEFF1880064D322 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E32C1C1AEFF1B90064D322 /* MainWindowController.swift in Sources */,
 				F6E32C001AEFF1880064D322 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
