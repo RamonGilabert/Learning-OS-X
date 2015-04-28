@@ -24,9 +24,23 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
 
         self.warmerButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.warmerButton.title = "Warmer"
+        self.warmerButton.target = self
+        self.warmerButton.action = "onWarmerButtonPressed"
 
         self.coolerButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.coolerButton.title = "Cooler"
+        self.warmerButton.target = self
+        self.warmerButton.action = "onCoolerButtonPressed"
+    }
+
+    // MARK: Button handler
+
+    func onWarmerButtonPressed() {
+
+    }
+
+    func onCoolerButtonPressed() {
+
     }
 
     // MARK: NSWindowDelegate methods
