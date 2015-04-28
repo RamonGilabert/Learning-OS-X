@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6E32C2D1AF00B2C0064D322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E32C2C1AF00B2C0064D322 /* AppDelegate.swift */; };
+		F6E32C2F1AF00B2C0064D322 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E32C2E1AF00B2C0064D322 /* Document.swift */; };
+		F6E32C321AF00B2C0064D322 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E32C301AF00B2C0064D322 /* Document.xib */; };
+		F6E32C341AF00B2C0064D322 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E32C331AF00B2C0064D322 /* Images.xcassets */; };
+		F6E32C371AF00B2C0064D322 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E32C351AF00B2C0064D322 /* MainMenu.xib */; };
+		F6E32C431AF00B2C0064D322 /* RaiseManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E32C421AF00B2C0064D322 /* RaiseManTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6E32C3D1AF00B2C0064D322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E32C1F1AF00B2C0064D322 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6E32C261AF00B2C0064D322;
+			remoteInfo = RaiseMan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6E32C271AF00B2C0064D322 /* RaiseMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E32C2B1AF00B2C0064D322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E32C2C1AF00B2C0064D322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6E32C2E1AF00B2C0064D322 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		F6E32C311AF00B2C0064D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
+		F6E32C331AF00B2C0064D322 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6E32C361AF00B2C0064D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F6E32C3C1AF00B2C0064D322 /* RaiseManTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseManTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E32C411AF00B2C0064D322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E32C421AF00B2C0064D322 /* RaiseManTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseManTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6E32C241AF00B2C0064D322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E32C391AF00B2C0064D322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6E32C1E1AF00B2C0064D322 = {
+			isa = PBXGroup;
+			children = (
+				F6E32C291AF00B2C0064D322 /* RaiseMan */,
+				F6E32C3F1AF00B2C0064D322 /* RaiseManTests */,
+				F6E32C281AF00B2C0064D322 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6E32C281AF00B2C0064D322 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6E32C271AF00B2C0064D322 /* RaiseMan.app */,
+				F6E32C3C1AF00B2C0064D322 /* RaiseManTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6E32C291AF00B2C0064D322 /* RaiseMan */ = {
+			isa = PBXGroup;
+			children = (
+				F6E32C2C1AF00B2C0064D322 /* AppDelegate.swift */,
+				F6E32C2E1AF00B2C0064D322 /* Document.swift */,
+				F6E32C301AF00B2C0064D322 /* Document.xib */,
+				F6E32C331AF00B2C0064D322 /* Images.xcassets */,
+				F6E32C351AF00B2C0064D322 /* MainMenu.xib */,
+				F6E32C2A1AF00B2C0064D322 /* Supporting Files */,
+			);
+			path = RaiseMan;
+			sourceTree = "<group>";
+		};
+		F6E32C2A1AF00B2C0064D322 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E32C2B1AF00B2C0064D322 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6E32C3F1AF00B2C0064D322 /* RaiseManTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6E32C421AF00B2C0064D322 /* RaiseManTests.swift */,
+				F6E32C401AF00B2C0064D322 /* Supporting Files */,
+			);
+			path = RaiseManTests;
+			sourceTree = "<group>";
+		};
+		F6E32C401AF00B2C0064D322 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E32C411AF00B2C0064D322 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6E32C261AF00B2C0064D322 /* RaiseMan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E32C461AF00B2C0064D322 /* Build configuration list for PBXNativeTarget "RaiseMan" */;
+			buildPhases = (
+				F6E32C231AF00B2C0064D322 /* Sources */,
+				F6E32C241AF00B2C0064D322 /* Frameworks */,
+				F6E32C251AF00B2C0064D322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RaiseMan;
+			productName = RaiseMan;
+			productReference = F6E32C271AF00B2C0064D322 /* RaiseMan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6E32C3B1AF00B2C0064D322 /* RaiseManTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E32C491AF00B2C0064D322 /* Build configuration list for PBXNativeTarget "RaiseManTests" */;
+			buildPhases = (
+				F6E32C381AF00B2C0064D322 /* Sources */,
+				F6E32C391AF00B2C0064D322 /* Frameworks */,
+				F6E32C3A1AF00B2C0064D322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6E32C3E1AF00B2C0064D322 /* PBXTargetDependency */,
+			);
+			name = RaiseManTests;
+			productName = RaiseManTests;
+			productReference = F6E32C3C1AF00B2C0064D322 /* RaiseManTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6E32C1F1AF00B2C0064D322 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Ramon Gilabert";
+				TargetAttributes = {
+					F6E32C261AF00B2C0064D322 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F6E32C3B1AF00B2C0064D322 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F6E32C261AF00B2C0064D322;
+					};
+				};
+			};
+			buildConfigurationList = F6E32C221AF00B2C0064D322 /* Build configuration list for PBXProject "RaiseMan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6E32C1E1AF00B2C0064D322;
+			productRefGroup = F6E32C281AF00B2C0064D322 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6E32C261AF00B2C0064D322 /* RaiseMan */,
+				F6E32C3B1AF00B2C0064D322 /* RaiseManTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6E32C251AF00B2C0064D322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E32C321AF00B2C0064D322 /* Document.xib in Resources */,
+				F6E32C341AF00B2C0064D322 /* Images.xcassets in Resources */,
+				F6E32C371AF00B2C0064D322 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E32C3A1AF00B2C0064D322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6E32C231AF00B2C0064D322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E32C2F1AF00B2C0064D322 /* Document.swift in Sources */,
+				F6E32C2D1AF00B2C0064D322 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E32C381AF00B2C0064D322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E32C431AF00B2C0064D322 /* RaiseManTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6E32C3E1AF00B2C0064D322 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6E32C261AF00B2C0064D322 /* RaiseMan */;
+			targetProxy = F6E32C3D1AF00B2C0064D322 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6E32C301AF00B2C0064D322 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E32C311AF00B2C0064D322 /* Base */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		F6E32C351AF00B2C0064D322 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E32C361AF00B2C0064D322 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6E32C441AF00B2C0064D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6E32C451AF00B2C0064D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F6E32C471AF00B2C0064D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RaiseMan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F6E32C481AF00B2C0064D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RaiseMan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F6E32C4A1AF00B2C0064D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RaiseManTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMan.app/Contents/MacOS/RaiseMan";
+			};
+			name = Debug;
+		};
+		F6E32C4B1AF00B2C0064D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RaiseManTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaiseMan.app/Contents/MacOS/RaiseMan";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6E32C221AF00B2C0064D322 /* Build configuration list for PBXProject "RaiseMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E32C441AF00B2C0064D322 /* Debug */,
+				F6E32C451AF00B2C0064D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6E32C461AF00B2C0064D322 /* Build configuration list for PBXNativeTarget "RaiseMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E32C471AF00B2C0064D322 /* Debug */,
+				F6E32C481AF00B2C0064D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F6E32C491AF00B2C0064D322 /* Build configuration list for PBXNativeTarget "RaiseManTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E32C4A1AF00B2C0064D322 /* Debug */,
+				F6E32C4B1AF00B2C0064D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6E32C1F1AF00B2C0064D322 /* Project object */;
+}
