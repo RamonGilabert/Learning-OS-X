@@ -12,7 +12,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate, NSTableViewDel
         super.windowDidLoad()
 
         self.window!.title = "Just doing it"
-        self.window!.backgroundColor = NSColor(calibratedHue:0.87, saturation:0.44, brightness:0.97, alpha:1)
+        self.window!.backgroundColor = NSColor(calibratedHue:0.63, saturation:0.14, brightness:0.25, alpha:1)
         self.window!.delegate = self
 
         self.window!.contentView.addSubview(self.textFieldToDo)
@@ -40,6 +40,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate, NSTableViewDel
 
     func onAddButtonPressed() {
         self.arrayWithTasks.addObject(self.textFieldToDo.stringValue)
+        self.textFieldToDo.stringValue = ""
         self.tableView.reloadData()
     }
 
