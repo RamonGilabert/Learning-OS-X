@@ -85,6 +85,12 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
         return nameOfVoice
     }
 
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        let row = self.tableView.selectedRow
+        let arrayOfVoices = NSSpeechSynthesizer.availableVoices() as! [String]
+        self.speechSynth.setVoice(arrayOfVoices[row])
+    }
+
     // MARK: NSSpeechSynthesizer delegate methods
 
     func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
