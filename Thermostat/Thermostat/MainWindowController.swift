@@ -6,6 +6,8 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
     let warmerButton = NSButton()
     let coolerButton = NSButton()
 
+    // MARK: View lifecycle
+
     override func windowDidLoad() {
         super.windowDidLoad()
 
