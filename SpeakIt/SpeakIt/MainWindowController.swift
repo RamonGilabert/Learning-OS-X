@@ -6,6 +6,7 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
     let speechSynth = NSSpeechSynthesizer()
     let speakItButton = NSButton()
     let stopItButton = NSButton()
+    let scrollView = NSScrollView()
     let tableView = NSTableView()
     var isSpeaking = false
 
@@ -20,8 +21,16 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
         self.window!.contentView.addSubview(self.textField)
 
         self.speechSynth.delegate = self
-//        self.tableView.setDelegate(self)
-//        self.tableView.setDataSource(self)
+        self.tableView.setDelegate(self)
+        self.tableView.setDataSource(self)
+
+        let firstColumn = NSTableColumn(identifier: "firstColumn")
+        firstColumn.width = self.tableView.frame.width
+        self.tableView.addTableColumn(firstColumn)
+        self.scrollView.documentView = self.tableView
+
+        self.window!.contentView.addSubview(self.scrollView)
+        self.tableView.reloadData()
 
         self.speakItButton.title = "Speak it"
         self.speakItButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
@@ -65,13 +74,16 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
 
     // MARK: TableView delegate methods
 
-//    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-//        return NSSpeechSynthesizer.availableVoices()!.count
-//    }
-//
-//    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-//
-//    }
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        return NSSpeechSynthesizer.availableVoices()!.count
+    }
+
+    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+        let arrayOfVoices = NSSpeechSynthesizer.availableVoices() as! [String]
+        var nameOfVoice = arrayOfVoices[row]
+        nameOfVoice = getTheStringFromIdentifier(nameOfVoice)!
+        return nameOfVoice
+    }
 
     // MARK: NSSpeechSynthesizer delegate methods
 
@@ -88,7 +100,7 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
 
     func windowDidResize(notification: NSNotification) {
         self.textField.frame = NSMakeRect(15, self.window!.contentView.frame.height - 15 - (self.window!.contentView.frame.height / 1.75), self.window!.contentView.frame.width - 230, self.window!.contentView.frame.height / 1.75)
-        self.tableView.frame = NSMakeRect(self.textField.frame.width + 15, self.window!.contentView.frame.height - 15 - (self.window!.contentView.frame.height / 1.75), self.window!.contentView.frame.width - self.textField.frame.width - 30, self.window!.contentView.frame.height / 1.75)
+        self.scrollView.frame = NSMakeRect(self.textField.frame.width + 30, self.window!.contentView.frame.height - 15 - (self.window!.contentView.frame.height / 1.75), self.window!.contentView.frame.width - self.textField.frame.width - 45, self.window!.contentView.frame.height / 1.75)
         self.speakItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 82.5, self.textField.frame.origin.y - 65, 75, 25)
         self.stopItButton.frame = NSMakeRect(self.window!.contentView.frame.width - 155, self.textField.frame.origin.y - 65, 75, 25)
     }
@@ -105,5 +117,11 @@ class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSW
         }
     }
 
-    func getTheString
+    func getTheStringFromIdentifier(identifier: String) -> String? {
+        if let attributes = NSSpeechSynthesizer.attributesForVoice(identifier) {
+            return attributes[NSVoiceName] as? String
+        } else {
+            return nil
+        }
+    }
 }
