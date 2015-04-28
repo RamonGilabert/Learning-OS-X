@@ -11,6 +11,8 @@
 		F6BCB6F41AEF91E900B24875 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6BCB6F31AEF91E900B24875 /* Images.xcassets */; };
 		F6BCB6F71AEF91EA00B24875 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6BCB6F51AEF91EA00B24875 /* MainMenu.xib */; };
 		F6BCB7031AEF91EA00B24875 /* ToDoItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCB7021AEF91EA00B24875 /* ToDoItTests.swift */; };
+		F6BCB70E1AEF924B00B24875 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCB70C1AEF924B00B24875 /* MainWindowController.swift */; };
+		F6BCB70F1AEF924B00B24875 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6BCB70D1AEF924B00B24875 /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		F6BCB6FC1AEF91EA00B24875 /* ToDoItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BCB7011AEF91EA00B24875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6BCB7021AEF91EA00B24875 /* ToDoItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItTests.swift; sourceTree = "<group>"; };
+		F6BCB70C1AEF924B00B24875 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		F6BCB70D1AEF924B00B24875 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				F6BCB6F11AEF91E900B24875 /* AppDelegate.swift */,
+				F6BCB70C1AEF924B00B24875 /* MainWindowController.swift */,
+				F6BCB70D1AEF924B00B24875 /* MainWindowController.xib */,
 				F6BCB6F31AEF91E900B24875 /* Images.xcassets */,
-				F6BCB6F51AEF91EA00B24875 /* MainMenu.xib */,
 				F6BCB6EF1AEF91E900B24875 /* Supporting Files */,
 			);
 			path = ToDoIt;
@@ -84,6 +89,7 @@
 		F6BCB6EF1AEF91E900B24875 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6BCB6F51AEF91EA00B24875 /* MainMenu.xib */,
 				F6BCB6F01AEF91E900B24875 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -187,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6BCB6F41AEF91E900B24875 /* Images.xcassets in Resources */,
+				F6BCB70F1AEF924B00B24875 /* MainWindowController.xib in Resources */,
 				F6BCB6F71AEF91EA00B24875 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BCB70E1AEF924B00B24875 /* MainWindowController.swift in Sources */,
 				F6BCB6F21AEF91E900B24875 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
