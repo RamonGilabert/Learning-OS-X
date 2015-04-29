@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CE24C718-9B3A-4B7C-9E7F-DBE7D29B96FA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>RaiseMan</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3883F9E35E374A24E0BED88687472EB96D5A7200</key>
 		<string>https://github.com/RamonGilabert/Learning-OS-X.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RaiseMan/RaiseMan.xcodeproj/project.xcworkspace</string>
+	<string>RaiseMan/RaiseMan.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3883F9E35E374A24E0BED88687472EB96D5A7200</key>
