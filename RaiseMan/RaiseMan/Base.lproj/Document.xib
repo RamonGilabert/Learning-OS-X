@@ -26,5 +26,6 @@
             </connections>
             <point key="canvasLocation" x="444.5" y="394.5"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="gsP-Pt-Dzj"/>
     </objects>
 </document>

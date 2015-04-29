@@ -1,12 +1,13 @@
 import Cocoa
 
-class Document: NSDocument, NSWindowDelegate {
+class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDataSource {
 
     let scrollView = NSScrollView()
     let tableView = NSTableView()
     let addEmployeeButton = NSButton()
     let removeButton = NSButton()
     var documentWindow = NSWindow()
+    var employees = NSMutableArray()
 
     override init() {
         super.init()
@@ -25,19 +26,25 @@ class Document: NSDocument, NSWindowDelegate {
 
         let firstColumn = NSTableColumn(identifier: "firstColumn")
         firstColumn.title = "Name"
-        firstColumn.width = 150
+        firstColumn.width = 160
         let secondColumn = NSTableColumn(identifier: "secondColumn")
         secondColumn.title = "Raise"
         self.tableView.addTableColumn(firstColumn)
         self.tableView.addTableColumn(secondColumn)
+        self.tableView.setDelegate(self)
+        self.tableView.setDataSource(self)
         self.scrollView.borderType = NSBorderType.BezelBorder
         self.scrollView.documentView = self.tableView
 
         self.addEmployeeButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.addEmployeeButton.title = "Add employee"
+        self.addEmployeeButton.target = self
+        self.addEmployeeButton.action = "addEmployee"
 
         self.removeButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.removeButton.title = "Remove"
+        self.removeButton.target = self
+        self.removeButton.action = "removeEmployee"
     }
 
     override class func autosavesInPlace() -> Bool {
@@ -54,6 +61,33 @@ class Document: NSDocument, NSWindowDelegate {
 
     override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
         return false
+    }
+
+    // MARK: IBAction handlers
+
+    func addEmployee() {
+        self.employees.addObject(Employee())
+        self.tableView.reloadData()
+    }
+
+    func removeEmployee() {
+
+    }
+
+    // MARK: NSTableView delegate methods
+
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        return self.employees.count
+    }
+
+    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+        if tableColumn!.identifier == "firstColumn" {
+            return "Sean Parker"
+        } else if tableColumn!.identifier == "secondColumn" {
+            return 20
+        }
+
+        return nil
     }
 
     // MARK: NSWindow delegate methods
