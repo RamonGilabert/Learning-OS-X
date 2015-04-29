@@ -8,6 +8,7 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
     let removeButton = NSButton()
     var documentWindow = NSWindow()
     var employees = NSMutableArray()
+    var employeeToRemove = Employee()
 
     override init() {
         super.init()
@@ -71,7 +72,11 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
     }
 
     func removeEmployee() {
-
+        if self.employees.containsObject(self.employeeToRemove) {
+            self.tableView.deselectRow(self.employees.indexOfObject(self.employeeToRemove))
+            self.employees.removeObject(self.employeeToRemove)
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: NSTableView delegate methods
@@ -88,6 +93,11 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         }
 
         return nil
+    }
+
+    func tableView(tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        self.employeeToRemove = self.employees[row] as! Employee
+        return true
     }
 
     // MARK: NSWindow delegate methods
