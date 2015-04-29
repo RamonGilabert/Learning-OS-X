@@ -79,16 +79,18 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
     // MARK: IBAction handlers
 
     func addEmployee() {
-        self.employees.addObject(Employee())
+        let newEmployee = Employee()
+        self.employees.addObject(newEmployee)
         self.tableView.reloadData()
+        self.undoManager!.prepareWithInvocationTarget(self).removeEmployee()
+        self.employeeToRemove = newEmployee
     }
 
     func removeEmployee() {
-        if self.employees.containsObject(self.employeeToRemove) {
-            self.tableView.deselectRow(self.employees.indexOfObject(self.employeeToRemove))
-            self.employees.removeObject(self.employeeToRemove)
-            self.tableView.reloadData()
-        }
+        self.tableView.deselectRow(self.employees.indexOfObject(self.employeeToRemove))
+        self.employees.removeObject(self.employeeToRemove)
+        self.tableView.reloadData()
+        self.undoManager!.prepareWithInvocationTarget(self).addEmployee()
     }
 
     // MARK: NSTableView delegate methods
