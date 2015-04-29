@@ -21,6 +21,10 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         self.documentWindow.delegate = self
         self.documentWindow.minSize = NSMakeSize(500, 200)
 
+        self.scrollView.frame = NSMakeRect(15, 15, self.documentWindow.contentView.frame.width/1.5, self.documentWindow.contentView.frame.height - 30)
+        self.addEmployeeButton.frame = NSMakeRect(self.documentWindow.frame.width/1.5 + 30, self.documentWindow.contentView.frame.height - 42.5, self.documentWindow.contentView.frame.width - (self.documentWindow.contentView.frame.width/1.5) - 45, 35)
+        self.removeButton.frame = NSMakeRect(self.documentWindow.frame.width/1.5 + 30, self.documentWindow.contentView.frame.height - 77.5, self.documentWindow.contentView.frame.width - (self.documentWindow.contentView.frame.width/1.5) - 45, 35)
+
         self.documentWindow.contentView.addSubview(self.scrollView)
         self.documentWindow.contentView.addSubview(self.addEmployeeButton)
         self.documentWindow.contentView.addSubview(self.removeButton)
