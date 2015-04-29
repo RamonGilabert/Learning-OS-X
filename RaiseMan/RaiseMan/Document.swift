@@ -28,8 +28,12 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         let firstColumn = NSTableColumn(identifier: "firstColumn")
         firstColumn.title = "Name"
         firstColumn.width = 160
+        let firstColumnSortDescriptor = NSSortDescriptor(key: "name", ascending: true, selector: "caseInsensitiveCompare:")
+        firstColumn.sortDescriptorPrototype = firstColumnSortDescriptor
         let secondColumn = NSTableColumn(identifier: "secondColumn")
         secondColumn.title = "Raise"
+        let secondColumnSortDescriptor = NSSortDescriptor(key: "raise", ascending: true, selector: "compare:")
+        secondColumn.sortDescriptorPrototype = secondColumnSortDescriptor
         self.tableView.addTableColumn(firstColumn)
         self.tableView.addTableColumn(secondColumn)
         self.tableView.setDelegate(self)
@@ -62,6 +66,14 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
 
     override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
         return false
+    }
+
+    // MARK: Sort descriptors
+
+    func tableView(tableView: NSTableView, sortDescriptorsDidChange oldDescriptors: [AnyObject]) {
+        let arraySorted = self.employees.sortedArrayUsingDescriptors(tableView.sortDescriptors)
+        self.employees = NSMutableArray(array: arraySorted)
+        self.tableView.reloadData()
     }
 
     // MARK: IBAction handlers
