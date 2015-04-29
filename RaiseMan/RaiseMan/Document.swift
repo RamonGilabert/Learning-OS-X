@@ -90,7 +90,6 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         self.tableView.deselectRow(self.employees.indexOfObject(self.employeeToRemove))
         self.employees.removeObject(self.employeeToRemove)
         self.tableView.reloadData()
-        self.undoManager!.prepareWithInvocationTarget(self).addEmployee()
     }
 
     // MARK: NSTableView delegate methods
