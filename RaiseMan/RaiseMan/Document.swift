@@ -106,6 +106,16 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         return nil
     }
 
+    func tableView(tableView: NSTableView, setObjectValue object: AnyObject?, forTableColumn tableColumn: NSTableColumn?, row: Int) {
+        let employee = self.employees[row] as! Employee
+
+        if tableColumn?.identifier == "firstColumn" {
+            employee.name = object as? String
+        } else if tableColumn?.identifier == "secondColumn" {
+            employee.raise = object!.floatValue
+        }
+    }
+
     func tableViewSelectionDidChange(notification: NSNotification) {
         if self.tableView.selectedRow >= 0 {
             self.employeeToRemove = self.employees[self.tableView.selectedRow] as! Employee
@@ -113,16 +123,6 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         } else {
             self.removeButton.enabled = false
         }
-    }
-
-    override func controlTextDidEndEditing(obj: NSNotification) {
-        let dictionary = obj.userInfo!
-        let textView = dictionary["NSFieldEditor"] as! NSTextView
-        let employee = self.employeeToRemove
-        employee.name = textView.string!
-        self.employees
-        self.employees.removeObject(self.employeeToRemove)
-        println(textView.string!)
     }
 
     // MARK: NSWindow delegate methods
