@@ -92,10 +92,15 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
     }
 
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+        let employee = self.employees[row] as! Employee
+
         if tableColumn!.identifier == "firstColumn" {
-            return "Sean Parker"
+            return employee.name
         } else if tableColumn!.identifier == "secondColumn" {
-            return 20
+            let numberFormatter = NSNumberFormatter()
+            numberFormatter.numberStyle = NSNumberFormatterStyle.PercentStyle
+            let formattedString = numberFormatter.stringFromNumber(employee.raise!)
+            return formattedString
         }
 
         return nil
@@ -108,6 +113,16 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         } else {
             self.removeButton.enabled = false
         }
+    }
+
+    override func controlTextDidEndEditing(obj: NSNotification) {
+        let dictionary = obj.userInfo!
+        let textView = dictionary["NSFieldEditor"] as! NSTextView
+        let employee = self.employeeToRemove
+        employee.name = textView.string!
+        self.employees
+        self.employees.removeObject(self.employeeToRemove)
+        println(textView.string!)
     }
 
     // MARK: NSWindow delegate methods
