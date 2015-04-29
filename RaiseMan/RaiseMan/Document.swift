@@ -61,11 +61,14 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
     }
 
     override func dataOfType(typeName: String, error outError: NSErrorPointer) -> NSData? {
-        return nil
+        return NSKeyedArchiver.archivedDataWithRootObject(self.employees)
     }
 
     override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
-        return false
+        let array = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! NSArray
+        self.employees = NSMutableArray(array: array)
+        self.tableView.reloadData()
+        return true
     }
 
     // MARK: Sort descriptors
