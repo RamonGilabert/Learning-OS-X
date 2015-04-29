@@ -82,6 +82,12 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
     // MARK: NSTableView delegate methods
 
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        if self.employees.containsObject(self.employeeToRemove) {
+            self.removeButton.enabled = true
+        } else {
+            self.removeButton.enabled = false
+        }
+
         return self.employees.count
     }
 
@@ -95,9 +101,13 @@ class Document: NSDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDa
         return nil
     }
 
-    func tableView(tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
-        self.employeeToRemove = self.employees[row] as! Employee
-        return true
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        if self.tableView.selectedRow >= 0 {
+            self.employeeToRemove = self.employees[self.tableView.selectedRow] as! Employee
+            self.removeButton.enabled = true
+        } else {
+            self.removeButton.enabled = false
+        }
     }
 
     // MARK: NSWindow delegate methods
