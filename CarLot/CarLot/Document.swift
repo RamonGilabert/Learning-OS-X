@@ -116,14 +116,14 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
         self.imageViewCar.frame = NSMakeRect(self.boxContainer.frame.width / 2, 15, self.boxContainer.frame.width/2 - 27.5, self.boxContainer.frame.height - 52.5)
 
-        self.datePicker.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/5 - 30, self.imageViewCar.frame.height - 5, self.documentView.frame.width/5, 75)
+        self.datePicker.frame = NSMakeRect(self.boxContainer.frame.width - self.imageViewCar.frame.width - self.boxContainer.frame.width/5 - 40, self.imageViewCar.frame.height - 5, self.boxContainer.frame.width/5, 75)
 
-        self.levelIndicator.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/5 - 30, self.imageViewCar.frame.height - self.datePicker.frame.height, self.documentView.frame.width/5, 75)
+        self.levelIndicator.frame = NSMakeRect(self.boxContainer.frame.width - self.imageViewCar.frame.width - self.boxContainer.frame.width/5 - 40, self.imageViewCar.frame.height - self.datePicker.frame.height, self.boxContainer.frame.width/5, 75)
 
-        self.labelDate.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/2.5 - 32.5, self.imageViewCar.frame.height - 5, self.documentView.frame.width/2.5, 25)
+        self.labelDate.frame = NSMakeRect(self.boxContainer.frame.width - self.imageViewCar.frame.width - self.boxContainer.frame.width/5 - 40, self.imageViewCar.frame.height - 5, self.boxContainer.frame.width/5, 21)
         self.labelDate.sizeToFit()
 
-        self.labelCondition.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/2.5 - 32.5, self.imageViewCar.frame.height - self.datePicker.frame.height + 25, self.documentView.frame.width/2.5, 25)
+        self.labelCondition.frame = NSMakeRect(self.boxContainer.frame.width - self.imageViewCar.frame.width - self.boxContainer.frame.width/5 - 40, self.imageViewCar.frame.height - self.datePicker.frame.height, self.boxContainer.frame.width/5, 21)
         self.labelCondition.sizeToFit()
     }
 
