@@ -9,8 +9,8 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     let imageViewCar = NSImageView()
     let levelIndicator = NSLevelIndicator()
     let labelExplanation = NSTextField()
-    let labelDate = NSTextField()
-    let labelCondition = NSTextField()
+    var labelDate = NSTextField()
+    var labelCondition = NSTextField()
     var documentView = NSView()
 
     override init() {
@@ -65,6 +65,13 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.levelIndicator.criticalValue = 2
         self.levelIndicator.integerValue = 2
 
+        self.labelDate = configureTextField(self.labelDate)
+        self.labelCondition = configureTextField(self.labelCondition)
+
+        self.labelDate.stringValue = "Date purchased"
+        self.labelCondition.stringValue = "Condition"
+        self.labelCondition.alignment = NSTextAlignment.RightTextAlignment
+
         self.addButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.addButton.title = "Add"
         self.removeButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
@@ -102,5 +109,20 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.imageViewCar.frame = NSMakeRect(self.documentView.frame.width / 2, 15, self.documentView.frame.width/2 - 15, self.documentView.frame.height - self.tableView.frame.height - 85)
         self.datePicker.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/5 - 30, self.imageViewCar.frame.height - 5, self.documentView.frame.width/5, 75)
         self.levelIndicator.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/5 - 30, self.imageViewCar.frame.height - self.datePicker.frame.height, self.documentView.frame.width/5, 75)
+        self.labelDate.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/2.5 - 32.5, self.imageViewCar.frame.height - 5, self.documentView.frame.width/2.5, 25)
+        self.labelDate.sizeToFit()
+        self.labelCondition.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/2.5 - 32.5, self.imageViewCar.frame.height - self.datePicker.frame.height + 25, self.documentView.frame.width/2.5, 25)
+        self.labelCondition.sizeToFit()
+    }
+
+    func configureTextField(textField: NSTextField) -> NSTextField {
+        textField.selectable = false
+        textField.editable = false
+        textField.drawsBackground = false
+        textField.bezeled = false
+        textField.font = NSFont(name: "AvenirNext-Regular", size: 15)
+        textField.sizeToFit()
+
+        return textField
     }
 }
