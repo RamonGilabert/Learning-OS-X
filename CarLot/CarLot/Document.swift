@@ -96,20 +96,30 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     }
 
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-
-        let cell = NSTableCellView()
-
-        if tableColumn?.identifier == "thirdColumn" {
+        if tableColumn?.identifier == "firstColumn" {
+            let view = NSView()
+            let textField = NSTextField()
+            textField.bezeled = false
+            textField.selectable = false
+            textField.editable = false
+            textField.backgroundColor = NSColor.clearColor()
+            return textField
+        } else if tableColumn?.identifier == "secondColumn" {
+            let view = NSTextField()
+            view.bezeled = false
+            view.selectable = false
+            view.editable = false
+            view.backgroundColor = NSColor.clearColor()
+            return view
+        } else {
             let checkBox = NSButton()
             checkBox.setButtonType(NSButtonType.SwitchButton)
-            cell.addSubview(checkBox)
+            return checkBox
         }
-
-        return nil
     }
 
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-        return nil
+        return "Sup"
     }
 
     // MARK: NSWindow delegate methods
