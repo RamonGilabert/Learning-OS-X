@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6CEDAD81AF2B39F0073BE75 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEDAD71AF2B39F0073BE75 /* Car.swift */; };
 		F6CF2C351AF2204C00C213E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CF2C341AF2204C00C213E7 /* AppDelegate.swift */; };
 		F6CF2C371AF2204C00C213E7 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CF2C361AF2204C00C213E7 /* Document.swift */; };
 		F6CF2C3D1AF2204C00C213E7 /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6CF2C3B1AF2204C00C213E7 /* Document.xcdatamodeld */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6CEDAD71AF2B39F0073BE75 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		F6CF2C2F1AF2204C00C213E7 /* CarLot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarLot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CF2C331AF2204C00C213E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6CF2C341AF2204C00C213E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				F6CF2C341AF2204C00C213E7 /* AppDelegate.swift */,
 				F6CF2C361AF2204C00C213E7 /* Document.swift */,
+				F6CEDAD71AF2B39F0073BE75 /* Car.swift */,
 				F6CF2C3E1AF2204C00C213E7 /* Images.xcassets */,
 				F6CF2C3B1AF2204C00C213E7 /* Document.xcdatamodeld */,
 				F6CF2C321AF2204C00C213E7 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			files = (
 				F6CF2C3D1AF2204C00C213E7 /* Document.xcdatamodeld in Sources */,
 				F6CF2C371AF2204C00C213E7 /* Document.swift in Sources */,
+				F6CEDAD81AF2B39F0073BE75 /* Car.swift in Sources */,
 				F6CF2C351AF2204C00C213E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +408,7 @@
 				F6CF2C531AF2204C00C213E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6CF2C541AF2204C00C213E7 /* Build configuration list for PBXNativeTarget "CarLotTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +417,7 @@
 				F6CF2C561AF2204C00C213E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

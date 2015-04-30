@@ -41,7 +41,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         firstColumn.width = 250
         let secondColumn = NSTableColumn(identifier: "secondColumn")
         secondColumn.title = "Price"
-        secondColumn.width = 150
+        secondColumn.width = 125
         let thirdColumn = NSTableColumn(identifier: "thirdColumn")
         thirdColumn.title = "Special"
 
@@ -114,6 +114,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             view.bezeled = false
             view.selectable = false
             view.editable = false
+            view.stringValue = "Sup"
             view.backgroundColor = NSColor.clearColor()
             return view
         } else {
@@ -121,10 +122,6 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             checkBox.setButtonType(NSButtonType.SwitchButton)
             return checkBox
         }
-    }
-
-    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-        return "Sup"
     }
 
     // MARK: NSWindow delegate methods
