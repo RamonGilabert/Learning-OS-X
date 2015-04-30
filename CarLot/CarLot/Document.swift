@@ -29,6 +29,10 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.documentView.addSubview(self.addButton)
         self.documentView.addSubview(self.removeButton)
         self.documentView.addSubview(self.imageViewCar)
+        self.documentView.addSubview(self.labelDate)
+        self.documentView.addSubview(self.datePicker)
+        self.documentView.addSubview(self.labelCondition)
+        self.documentView.addSubview(self.levelIndicator)
 
         layoutFrameOfViews()
 
@@ -48,6 +52,14 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.tableView.setDataSource(self)
 
         self.imageViewCar.editable = true
+
+        let levelIndicatorCell = self.levelIndicator.cell() as! NSLevelIndicatorCell
+        levelIndicatorCell.levelIndicatorStyle = NSLevelIndicatorStyle.RatingLevelIndicatorStyle
+        levelIndicatorCell.minValue = 0
+        levelIndicatorCell.maxValue = 5
+        levelIndicatorCell.warningValue = 2
+        levelIndicatorCell.criticalValue = 2
+        levelIndicatorCell.editable = true
 
         self.addButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.addButton.title = "Add"
@@ -72,5 +84,6 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.addButton.frame = NSMakeRect((self.documentView.frame.width * 0.867) - 15, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
         self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/7.5, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
         self.imageViewCar.frame = NSMakeRect(self.documentView.frame.width / 2, 15, self.documentView.frame.width/2 - 15, self.documentView.frame.height - self.tableView.frame.height - 85)
+        self.levelIndicator.frame = NSMakeRect(100, 100, 200, 200)
     }
 }
