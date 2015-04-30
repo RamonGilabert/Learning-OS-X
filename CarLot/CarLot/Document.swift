@@ -80,8 +80,12 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
         self.addButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.addButton.title = "Add"
+        self.addButton.target = self
+        self.addButton.action = "onAddButtonPressed"
         self.removeButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.removeButton.title = "Remove"
+        self.removeButton.target = self
+        self.removeButton.action = "onRemoveButtonPressed"
 
         layoutFrameOfViews()
     }
@@ -93,10 +97,12 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     // MARK: NSTableView delegate methods
 
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return 10
+        return self.cars.count
     }
 
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let car = self.cars[row] as! Car
+
         if tableColumn?.identifier == "firstColumn" {
             let view = NSView()
             let textField = NSTextField(frame: NSMakeRect(20, 0, 250, 17))
@@ -105,9 +111,9 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             textField.editable = false
             textField.backgroundColor = NSColor.clearColor()
             let imageView = NSImageView(frame: NSMakeRect(0, 0, 17, 17))
-            imageView.image = NSImage(named: "first")
+            imageView.image = car.carImage!
             view.addSubview(imageView)
-            textField.stringValue = "Sup"
+            textField.stringValue = car.model!
             view.addSubview(textField)
             return view
         } else if tableColumn?.identifier == "secondColumn" {
@@ -115,12 +121,16 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             view.bezeled = false
             view.selectable = false
             view.editable = false
-            view.stringValue = "Sup"
+            let numberFormatter = NSNumberFormatter()
+            numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+            view.stringValue = numberFormatter.stringFromNumber(NSNumber(integer: car.price!))!
             view.backgroundColor = NSColor.clearColor()
             return view
         } else {
             let checkBox = NSButton()
             checkBox.setButtonType(NSButtonType.SwitchButton)
+            checkBox.title = ""
+            checkBox.integerValue = car.special!
             return checkBox
         }
     }
@@ -129,6 +139,21 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
     func windowDidResize(notification: NSNotification) {
         layoutFrameOfViews()
+    }
+
+    // MARK: Action methods
+
+    func onAddButtonPressed() {
+        let car = Car()
+        car.model = "Model name"
+        car.price = 1000
+        car.special = 0
+        car.carImage = NSImage(named: "")
+        self.tableView.reloadData()
+    }
+
+    func onRemoveButtonPressed() {
+
     }
 
     // MARK: Helper methods
