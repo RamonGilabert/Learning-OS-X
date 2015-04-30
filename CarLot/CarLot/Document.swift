@@ -98,12 +98,17 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
         if tableColumn?.identifier == "firstColumn" {
             let view = NSView()
-            let textField = NSTextField()
+            let textField = NSTextField(frame: NSMakeRect(20, 0, 250, 17))
             textField.bezeled = false
             textField.selectable = false
             textField.editable = false
             textField.backgroundColor = NSColor.clearColor()
-            return textField
+            let imageView = NSImageView(frame: NSMakeRect(0, 0, 17, 17))
+            imageView.image = NSImage(named: "first")
+            view.addSubview(imageView)
+            textField.stringValue = "Sup"
+            view.addSubview(textField)
+            return view
         } else if tableColumn?.identifier == "secondColumn" {
             let view = NSTextField()
             view.bezeled = false
