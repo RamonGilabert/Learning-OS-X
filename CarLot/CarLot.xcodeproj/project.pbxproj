@@ -80,7 +80,6 @@
 				F6CF2C341AF2204C00C213E7 /* AppDelegate.swift */,
 				F6CF2C361AF2204C00C213E7 /* Document.swift */,
 				F6CF2C3E1AF2204C00C213E7 /* Images.xcassets */,
-				F6CF2C401AF2204C00C213E7 /* MainMenu.xib */,
 				F6CF2C3B1AF2204C00C213E7 /* Document.xcdatamodeld */,
 				F6CF2C321AF2204C00C213E7 /* Supporting Files */,
 			);
@@ -90,6 +89,7 @@
 		F6CF2C321AF2204C00C213E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6CF2C401AF2204C00C213E7 /* MainMenu.xib */,
 				F6CF2C331AF2204C00C213E7 /* Info.plist */,
 			);
 			name = "Supporting Files";
