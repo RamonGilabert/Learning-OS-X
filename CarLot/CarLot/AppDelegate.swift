@@ -21,9 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.movableByWindowBackground = true
         window.makeKeyAndOrderFront(true)
 
-        let windowController = NSWindowController()
-        self.mainWindowController.addWindowController(windowController)
-        (self.mainWindowController.windowControllers.first as! NSWindowController).window = window
+        self.mainWindowController = Document(window: window)
     }
 }
 
