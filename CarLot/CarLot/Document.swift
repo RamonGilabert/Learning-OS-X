@@ -27,9 +27,20 @@ class Document: NSPersistentDocument, NSWindowDelegate {
 
         layoutFrameOfViews()
 
-        self.addButton.bezelStyle = NSBezelStyle.RegularSquareBezelStyle
+        let firstColumn = NSTableColumn(identifier: "firstColumn")
+        firstColumn.title = "Make/Model"
+        let secondColumn = NSTableColumn(identifier: "secondColumn")
+        secondColumn.title = "Price"
+        let thirdColumn = NSTableColumn(identifier: "thirdColumn")
+        thirdColumn.title = "Special"
+
+        self.tableView.addTableColumn(firstColumn)
+        self.tableView.addTableColumn(secondColumn)
+        self.tableView.addTableColumn(thirdColumn)
+
+        self.addButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.addButton.title = "Add"
-        self.removeButton.bezelStyle = NSBezelStyle.RegularSquareBezelStyle
+        self.removeButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.removeButton.title = "Remove"
     }
 
@@ -48,6 +59,6 @@ class Document: NSPersistentDocument, NSWindowDelegate {
     func layoutFrameOfViews() {
         self.tableView.frame = NSMakeRect(15, (self.documentView.frame.height * 0.6) - 15, self.documentView.frame.width - 30, (self.documentView.frame.height * 0.4))
         self.addButton.frame = NSMakeRect((self.documentView.frame.width * 0.867) - 15, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
-        self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/7.5 - 15, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
+        self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/7.5, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
     }
 }
