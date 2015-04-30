@@ -2,6 +2,7 @@ import Cocoa
 
 class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NSTableViewDataSource {
 
+    let scrollView = NSScrollView()
     let tableView = NSTableView()
     let addButton = NSButton()
     let removeButton = NSButton()
@@ -25,7 +26,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.documentView = window!.contentView as! NSView
         window?.delegate = self
 
-        self.documentView.addSubview(self.tableView)
+        self.documentView.addSubview(self.scrollView)
         self.documentView.addSubview(self.addButton)
         self.documentView.addSubview(self.removeButton)
         self.documentView.addSubview(self.boxContainer)
@@ -37,7 +38,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
         let firstColumn = NSTableColumn(identifier: "firstColumn")
         firstColumn.title = "Make/Model"
-        firstColumn.width = self.tableView.frame.width/1.5
+        firstColumn.width = 250
         let secondColumn = NSTableColumn(identifier: "secondColumn")
         secondColumn.title = "Price"
         secondColumn.width = 150
@@ -49,6 +50,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.tableView.addTableColumn(thirdColumn)
         self.tableView.setDelegate(self)
         self.tableView.setDataSource(self)
+        self.scrollView.documentView = self.tableView
 
         self.boxContainer.title = "Car details"
 
@@ -97,12 +99,10 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
         let cell = NSTableCellView()
 
-        if tableColumn?.identifier == "firstColumn" {
-            
-        } else if tableColumn?.identifier == "secondColumn" {
-
-        } else if tableColumn?.identifier == "thirdColumn" {
-
+        if tableColumn?.identifier == "thirdColumn" {
+            let checkBox = NSButton()
+            checkBox.setButtonType(NSButtonType.SwitchButton)
+            cell.addSubview(checkBox)
         }
 
         return nil
@@ -121,7 +121,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     // MARK: Helper methods
 
     func layoutFrameOfViews() {
-        self.tableView.frame = NSMakeRect(15, (self.documentView.frame.height * 0.6) - 15, self.documentView.frame.width - 30, (self.documentView.frame.height * 0.4))
+        self.scrollView.frame = NSMakeRect(15, (self.documentView.frame.height * 0.6) - 15, self.documentView.frame.width - 30, (self.documentView.frame.height * 0.4))
 
         self.addButton.frame = NSMakeRect((self.documentView.frame.width * 0.867) - 15, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
 
