@@ -13,6 +13,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     var labelDate = NSTextField()
     var labelCondition = NSTextField()
     var documentView = NSView()
+    var cars = NSMutableArray()
 
     override init() {
         super.init()
