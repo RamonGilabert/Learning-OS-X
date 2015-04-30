@@ -93,6 +93,21 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         return 10
     }
 
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+
+        let cell = NSTableCellView()
+
+        if tableColumn?.identifier == "firstColumn" {
+            
+        } else if tableColumn?.identifier == "secondColumn" {
+
+        } else if tableColumn?.identifier == "thirdColumn" {
+
+        }
+
+        return nil
+    }
+
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
         return nil
     }
@@ -110,7 +125,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
         self.addButton.frame = NSMakeRect((self.documentView.frame.width * 0.867) - 15, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
 
-        self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/7.5, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
+        self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/6.5, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/6.5, 25)
 
         self.boxContainer.frame = NSMakeRect(15, 15, self.documentView.frame.width - 30, self.documentView.frame.height - self.tableView.frame.height - 67.5)
 
