@@ -104,23 +104,14 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         let car = self.cars[row] as! Car
 
         if tableColumn?.identifier == "firstColumn" {
-            let view = NSView()
-            let textField = NSTextField(frame: NSMakeRect(20, 0, 250, 17))
+            let textField = NSTextField()
             textField.bezeled = false
-            textField.selectable = false
-            textField.editable = false
             textField.backgroundColor = NSColor.clearColor()
-            let imageView = NSImageView(frame: NSMakeRect(0, 0, 17, 17))
-            imageView.image = car.carImage!
-            view.addSubview(imageView)
             textField.stringValue = car.model!
-            view.addSubview(textField)
-            return view
+            return textField
         } else if tableColumn?.identifier == "secondColumn" {
             let view = NSTextField()
             view.bezeled = false
-            view.selectable = false
-            view.editable = false
             let numberFormatter = NSNumberFormatter()
             numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
             view.stringValue = numberFormatter.stringFromNumber(NSNumber(integer: car.price!))!
@@ -149,6 +140,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         car.price = 1000
         car.special = 0
         car.carImage = NSImage(named: "")
+        self.cars.addObject(car)
         self.tableView.reloadData()
     }
 
@@ -161,11 +153,11 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     func layoutFrameOfViews() {
         self.scrollView.frame = NSMakeRect(15, (self.documentView.frame.height * 0.6) - 15, self.documentView.frame.width - 30, (self.documentView.frame.height * 0.4))
 
-        self.addButton.frame = NSMakeRect((self.documentView.frame.width * 0.867) - 15, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
+        self.addButton.frame = NSMakeRect((self.documentView.frame.width * 0.867) - 15, self.documentView.frame.height - self.scrollView.frame.height - 55, self.documentView.frame.width/7.5, 25)
 
-        self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/6.5, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/6.5, 25)
+        self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/6.5, self.documentView.frame.height - self.scrollView.frame.height - 55, self.documentView.frame.width/6.5, 25)
 
-        self.boxContainer.frame = NSMakeRect(15, 15, self.documentView.frame.width - 30, self.documentView.frame.height - self.tableView.frame.height - 67.5)
+        self.boxContainer.frame = NSMakeRect(15, 15, self.documentView.frame.width - 30, self.documentView.frame.height - self.scrollView.frame.height - 67.5)
 
         self.imageViewCar.frame = NSMakeRect(self.boxContainer.frame.width / 2, 15, self.boxContainer.frame.width/2 - 27.5, self.boxContainer.frame.height - 52.5)
 
