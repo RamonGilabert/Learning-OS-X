@@ -57,12 +57,13 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.datePicker.backgroundColor = NSColor.whiteColor()
 
         let levelIndicatorCell = self.levelIndicator.cell() as! NSLevelIndicatorCell
-        levelIndicatorCell.levelIndicatorStyle = NSLevelIndicatorStyle.RatingLevelIndicatorStyle
-        levelIndicatorCell.minValue = 0
-        levelIndicatorCell.maxValue = 5
-        levelIndicatorCell.warningValue = 2
-        levelIndicatorCell.criticalValue = 2
         levelIndicatorCell.editable = true
+        self.levelIndicator.levelIndicatorStyle = NSLevelIndicatorStyle.RatingLevelIndicatorStyle
+        self.levelIndicator.minValue = 0
+        self.levelIndicator.maxValue = 5
+        self.levelIndicator.warningValue = 2
+        self.levelIndicator.criticalValue = 2
+        self.levelIndicator.integerValue = 2
 
         self.addButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         self.addButton.title = "Add"
