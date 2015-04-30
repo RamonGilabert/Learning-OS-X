@@ -108,6 +108,9 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             textField.bezeled = false
             textField.backgroundColor = NSColor.clearColor()
             textField.stringValue = car.model!
+            textField.tag = row
+            textField.target = self
+            textField.action = "onTextFieldDidChange:"
             return textField
         } else if tableColumn?.identifier == "secondColumn" {
             let view = NSTextField()
@@ -124,6 +127,10 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             checkBox.integerValue = car.special!
             return checkBox
         }
+    }
+
+    func onTextFieldDidChange(sender: NSTextField) {
+        println(sender.stringValue)
     }
 
     // MARK: NSWindow delegate methods
