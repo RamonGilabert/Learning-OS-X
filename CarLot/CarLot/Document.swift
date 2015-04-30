@@ -120,11 +120,9 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
         self.levelIndicator.frame = NSMakeRect(self.boxContainer.frame.width - self.imageViewCar.frame.width - self.boxContainer.frame.width/5 - 40, self.imageViewCar.frame.height - self.datePicker.frame.height, self.boxContainer.frame.width/5, 75)
 
-        self.labelDate.frame = NSMakeRect(self.boxContainer.frame.width - self.imageViewCar.frame.width - self.boxContainer.frame.width/5 - 40, self.imageViewCar.frame.height - 5, self.boxContainer.frame.width/5, 21)
-        self.labelDate.sizeToFit()
+        self.labelDate.frame = NSMakeRect(15, self.imageViewCar.frame.height - 10, self.boxContainer.frame.width/5, 25)
 
-        self.labelCondition.frame = NSMakeRect(self.boxContainer.frame.width - self.imageViewCar.frame.width - self.boxContainer.frame.width/5 - 40, self.imageViewCar.frame.height - self.datePicker.frame.height, self.boxContainer.frame.width/5, 21)
-        self.labelCondition.sizeToFit()
+        self.labelCondition.frame = NSMakeRect(15, self.imageViewCar.frame.height - 54, self.boxContainer.frame.width/5, 25)
     }
 
     func configureTextField(textField: NSTextField) -> NSTextField {
@@ -132,7 +130,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         textField.editable = false
         textField.drawsBackground = false
         textField.bezeled = false
-        textField.sizeToFit()
+        textField.alignment = NSTextAlignment.RightTextAlignment
 
         return textField
     }
