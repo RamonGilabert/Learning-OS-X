@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F6CF2C351AF2204C00C213E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CF2C341AF2204C00C213E7 /* AppDelegate.swift */; };
 		F6CF2C371AF2204C00C213E7 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CF2C361AF2204C00C213E7 /* Document.swift */; };
-		F6CF2C3A1AF2204C00C213E7 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CF2C381AF2204C00C213E7 /* Document.xib */; };
 		F6CF2C3D1AF2204C00C213E7 /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6CF2C3B1AF2204C00C213E7 /* Document.xcdatamodeld */; };
 		F6CF2C3F1AF2204C00C213E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6CF2C3E1AF2204C00C213E7 /* Images.xcassets */; };
 		F6CF2C421AF2204C00C213E7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CF2C401AF2204C00C213E7 /* MainMenu.xib */; };
@@ -31,7 +30,6 @@
 		F6CF2C331AF2204C00C213E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6CF2C341AF2204C00C213E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6CF2C361AF2204C00C213E7 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		F6CF2C391AF2204C00C213E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
 		F6CF2C3C1AF2204C00C213E7 /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
 		F6CF2C3E1AF2204C00C213E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F6CF2C411AF2204C00C213E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			children = (
 				F6CF2C341AF2204C00C213E7 /* AppDelegate.swift */,
 				F6CF2C361AF2204C00C213E7 /* Document.swift */,
-				F6CF2C381AF2204C00C213E7 /* Document.xib */,
 				F6CF2C3E1AF2204C00C213E7 /* Images.xcassets */,
 				F6CF2C401AF2204C00C213E7 /* MainMenu.xib */,
 				F6CF2C3B1AF2204C00C213E7 /* Document.xcdatamodeld */,
@@ -195,7 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6CF2C3A1AF2204C00C213E7 /* Document.xib in Resources */,
 				F6CF2C3F1AF2204C00C213E7 /* Images.xcassets in Resources */,
 				F6CF2C421AF2204C00C213E7 /* MainMenu.xib in Resources */,
 			);
@@ -240,14 +236,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6CF2C381AF2204C00C213E7 /* Document.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6CF2C391AF2204C00C213E7 /* Base */,
-			);
-			name = Document.xib;
-			sourceTree = "<group>";
-		};
 		F6CF2C401AF2204C00C213E7 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

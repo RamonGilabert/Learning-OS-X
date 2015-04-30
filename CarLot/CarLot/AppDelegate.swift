@@ -11,16 +11,19 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    var mainWindowController = Document()
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        let window = NSWindow(contentRect: NSMakeRect(100, 100, 200, 200), styleMask: NSTitledWindowMask|NSResizableWindowMask|NSMiniaturizableWindowMask|NSClosableWindowMask, backing: NSBackingStoreType.Buffered, defer: false)
+        window.title = "New Window"
+        window.opaque = false
+        window.center()
+        window.movableByWindowBackground = true
+        window.makeKeyAndOrderFront(true)
+
+        let windowController = NSWindowController()
+        self.mainWindowController.addWindowController(windowController)
+        (self.mainWindowController.windowControllers.first as! NSWindowController).window = window
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 
