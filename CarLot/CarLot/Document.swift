@@ -8,7 +8,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     let datePicker = NSDatePicker()
     let imageViewCar = NSImageView()
     let levelIndicator = NSLevelIndicator()
-    let labelExplanation = NSTextField()
+    let boxContainer = NSBox()
     var labelDate = NSTextField()
     var labelCondition = NSTextField()
     var documentView = NSView()
@@ -28,11 +28,12 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.documentView.addSubview(self.tableView)
         self.documentView.addSubview(self.addButton)
         self.documentView.addSubview(self.removeButton)
-        self.documentView.addSubview(self.imageViewCar)
-        self.documentView.addSubview(self.labelDate)
-        self.documentView.addSubview(self.datePicker)
-        self.documentView.addSubview(self.labelCondition)
-        self.documentView.addSubview(self.levelIndicator)
+        self.documentView.addSubview(self.boxContainer)
+        self.boxContainer.addSubview(self.imageViewCar)
+        self.boxContainer.addSubview(self.labelDate)
+        self.boxContainer.addSubview(self.datePicker)
+        self.boxContainer.addSubview(self.labelCondition)
+        self.boxContainer.addSubview(self.levelIndicator)
 
         let firstColumn = NSTableColumn(identifier: "firstColumn")
         firstColumn.title = "Make/Model"
@@ -48,6 +49,8 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.tableView.addTableColumn(thirdColumn)
         self.tableView.setDelegate(self)
         self.tableView.setDataSource(self)
+
+        self.boxContainer.title = "Car details"
 
         self.imageViewCar.editable = true
 
@@ -104,13 +107,22 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
 
     func layoutFrameOfViews() {
         self.tableView.frame = NSMakeRect(15, (self.documentView.frame.height * 0.6) - 15, self.documentView.frame.width - 30, (self.documentView.frame.height * 0.4))
+
         self.addButton.frame = NSMakeRect((self.documentView.frame.width * 0.867) - 15, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
+
         self.removeButton.frame = NSMakeRect(self.addButton.frame.origin.x - self.documentView.frame.width/7.5, self.documentView.frame.height - self.tableView.frame.height - 55, self.documentView.frame.width/7.5, 25)
-        self.imageViewCar.frame = NSMakeRect(self.documentView.frame.width / 2, 15, self.documentView.frame.width/2 - 15, self.documentView.frame.height - self.tableView.frame.height - 85)
+
+        self.boxContainer.frame = NSMakeRect(15, 15, self.documentView.frame.width - 30, self.documentView.frame.height - self.tableView.frame.height - 67.5)
+
+        self.imageViewCar.frame = NSMakeRect(self.boxContainer.frame.width / 2, 15, self.boxContainer.frame.width/2 - 27.5, self.boxContainer.frame.height - 52.5)
+
         self.datePicker.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/5 - 30, self.imageViewCar.frame.height - 5, self.documentView.frame.width/5, 75)
+
         self.levelIndicator.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/5 - 30, self.imageViewCar.frame.height - self.datePicker.frame.height, self.documentView.frame.width/5, 75)
+
         self.labelDate.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/2.5 - 32.5, self.imageViewCar.frame.height - 5, self.documentView.frame.width/2.5, 25)
         self.labelDate.sizeToFit()
+
         self.labelCondition.frame = NSMakeRect(self.documentView.frame.width - self.imageViewCar.frame.width - self.documentView.frame.width/2.5 - 32.5, self.imageViewCar.frame.height - self.datePicker.frame.height + 25, self.documentView.frame.width/2.5, 25)
         self.labelCondition.sizeToFit()
     }
@@ -120,7 +132,6 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         textField.editable = false
         textField.drawsBackground = false
         textField.bezeled = false
-        textField.font = NSFont(name: "AvenirNext-Regular", size: 15)
         textField.sizeToFit()
 
         return textField
