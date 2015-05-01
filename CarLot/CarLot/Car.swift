@@ -1,6 +1,8 @@
 import Foundation
 import CoreData
 
+@objc(Car)
+
 class Car: NSManagedObject {
 
     @NSManaged var image: NSData

@@ -14,7 +14,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     var labelCondition = NSTextField()
     var documentView = NSView()
     var cars = NSMutableArray()
-    var carSelected = Car()
+    var carSelected: Car?
 
     override init() {
         super.init()
@@ -91,6 +91,10 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.removeButton.enabled = false
         self.boxContainer.hidden = true
 
+        let fetchRequest = NSFetchRequest(entityName: "Car")
+        let arrayFetched = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil)!
+        self.cars = NSMutableArray(array: arrayFetched)
+
         layoutFrameOfViews()
     }
 
@@ -142,7 +146,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         if self.tableView.selectedRow >= 0 {
             self.removeButton.enabled = true
             self.boxContainer.hidden = false
-            self.carSelected = self.cars[self.tableView.selectedRow] as! Car
+            self.carSelected = self.cars[self.tableView.selectedRow] as? Car
         } else {
             self.removeButton.enabled = false
             self.boxContainer.hidden = true
@@ -175,7 +179,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     // MARK: Action methods
 
     func onAddButtonPressed() {
-        let car = Car()
+        let car = Car(entity: NSEntityDescription.entityForName("Car", inManagedObjectContext: self.managedObjectContext)!, insertIntoManagedObjectContext: self.managedObjectContext)
         car.model = "Model name"
         car.price = 1000
         car.special = 0
@@ -184,9 +188,9 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     }
 
     func onRemoveButtonPressed() {
-        if self.cars.containsObject(self.carSelected) {
-            self.tableView.deselectRow(self.cars.indexOfObject(self.carSelected))
-            self.cars.removeObject(self.carSelected)
+        if self.cars.containsObject(self.carSelected!) {
+            self.tableView.deselectRow(self.cars.indexOfObject(self.carSelected!))
+            self.cars.removeObject(self.carSelected!)
             self.tableView.reloadData()
         }
     }

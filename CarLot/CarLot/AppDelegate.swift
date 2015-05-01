@@ -6,7 +6,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var mainWindowController = Document()
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let window = NSWindow(contentRect: NSMakeRect(100, 100, 510, 479), styleMask: NSTitledWindowMask|NSResizableWindowMask|NSMiniaturizableWindowMask|NSClosableWindowMask, backing: NSBackingStoreType.Buffered, defer: false)
+        let window = NSWindow(contentRect: NSMakeRect(100, 100, 510, 479), styleMask: NSTitledWindowMask | NSResizableWindowMask | NSMiniaturizableWindowMask | NSClosableWindowMask, backing: NSBackingStoreType.Buffered, defer: false)
         window.title = "New Window"
         window.opaque = false
         window.center()
