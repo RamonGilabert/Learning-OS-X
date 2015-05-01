@@ -110,15 +110,17 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             textField.stringValue = car.model!
             textField.tag = row
             textField.target = self
-            textField.action = "onTextFieldDidChange:"
+            textField.action = "onModelTextFieldDidChange:"
             return textField
         } else if tableColumn?.identifier == "secondColumn" {
             let view = NSTextField()
             view.bezeled = false
             let numberFormatter = NSNumberFormatter()
             numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-            view.stringValue = numberFormatter.stringFromNumber(NSNumber(integer: car.price!))!
+            view.stringValue = numberFormatter.stringFromNumber(car.price!)!
             view.backgroundColor = NSColor.clearColor()
+            view.target = self
+            view.action = "onPriceTextFieldDidChange:"
             return view
         } else {
             let checkBox = NSButton()
@@ -129,8 +131,16 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         }
     }
 
-    func onTextFieldDidChange(sender: NSTextField) {
-        println(sender.stringValue)
+    func onModelTextFieldDidChange(sender: NSTextField) {
+        let car = self.cars[sender.tag] as! Car
+        car.model = sender.stringValue
+    }
+
+    func onPriceTextFieldDidChange(sender: NSTextField) {
+        let car = self.cars[sender.tag] as! Car
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        car.price = numberFormatter.numberFromString(sender.stringValue)
     }
 
     // MARK: NSWindow delegate methods
