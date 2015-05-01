@@ -14,6 +14,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     var labelCondition = NSTextField()
     var documentView = NSView()
     var cars = NSMutableArray()
+    var carSelected = Car()
 
     override init() {
         super.init()
@@ -138,6 +139,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         if self.tableView.selectedRow >= 0 {
             self.removeButton.enabled = true
             self.boxContainer.hidden = false
+            self.carSelected = self.cars[self.tableView.selectedRow] as! Car
         } else {
             self.removeButton.enabled = false
             self.boxContainer.hidden = true
@@ -175,7 +177,11 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
     }
 
     func onRemoveButtonPressed() {
-
+        if self.cars.containsObject(self.carSelected) {
+            self.tableView.deselectRow(self.cars.indexOfObject(self.carSelected))
+            self.cars.removeObject(self.carSelected)
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: Helper methods
