@@ -131,6 +131,9 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             checkBox.setButtonType(NSButtonType.SwitchButton)
             checkBox.title = ""
             checkBox.integerValue = car.special!
+            checkBox.tag = row
+            checkBox.target = self
+            checkBox.action = "onCheckBoxClicked:"
             return checkBox
         }
     }
@@ -156,6 +159,11 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         let numberFormatter = NSNumberFormatter()
         numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         car.price = numberFormatter.numberFromString(sender.stringValue)
+    }
+
+    func onCheckBoxClicked(sender: NSButton) {
+        let car = self.cars[sender.tag] as! Car
+        car.special = sender.integerValue
     }
 
     // MARK: NSWindow delegate methods
