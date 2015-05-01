@@ -1,9 +1,13 @@
-import Cocoa
+import Foundation
+import CoreData
 
-class Car: NSObject {
+class Car: NSManagedObject {
 
-    var model: String?
-    var price: NSNumber?
-    var special: Int?
-    var carImage: NSImage?
+    @NSManaged var image: NSData
+    @NSManaged var condition: NSNumber
+    @NSManaged var model: String
+    @NSManaged var price: NSNumber
+    @NSManaged var special: NSNumber
+    @NSManaged var date: NSDate
+
 }

@@ -111,7 +111,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             let textField = NSTextField()
             textField.bezeled = false
             textField.backgroundColor = NSColor.clearColor()
-            textField.stringValue = car.model!
+            textField.stringValue = car.model
             textField.tag = row
             textField.target = self
             textField.action = "onModelTextFieldDidChange:"
@@ -121,7 +121,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             view.bezeled = false
             let numberFormatter = NSNumberFormatter()
             numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-            view.stringValue = numberFormatter.stringFromNumber(car.price!)!
+            view.stringValue = numberFormatter.stringFromNumber(car.price)!
             view.backgroundColor = NSColor.clearColor()
             view.target = self
             view.action = "onPriceTextFieldDidChange:"
@@ -130,7 +130,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             let checkBox = NSButton()
             checkBox.setButtonType(NSButtonType.SwitchButton)
             checkBox.title = ""
-            checkBox.integerValue = car.special!
+            checkBox.integerValue = car.special.integerValue
             checkBox.tag = row
             checkBox.target = self
             checkBox.action = "onCheckBoxClicked:"
@@ -158,7 +158,7 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         let car = self.cars[sender.tag] as! Car
         let numberFormatter = NSNumberFormatter()
         numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        car.price = numberFormatter.numberFromString(sender.stringValue)
+        car.price = numberFormatter.numberFromString(sender.stringValue)!
     }
 
     func onCheckBoxClicked(sender: NSButton) {
@@ -179,7 +179,6 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         car.model = "Model name"
         car.price = 1000
         car.special = 0
-        car.carImage = NSImage(named: "")
         self.cars.addObject(car)
         self.tableView.reloadData()
     }
