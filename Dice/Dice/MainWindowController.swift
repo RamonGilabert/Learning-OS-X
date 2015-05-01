@@ -11,6 +11,8 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
         self.contentView = window!.contentView as! NSView
 
         self.contentView.addSubview(self.dieView)
+
+        layoutSubviews()
     }
 
     required init?(coder: NSCoder) {
@@ -20,12 +22,12 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
     // MARK: Window delegate methods
 
     func windowDidResize(notification: NSNotification) {
-
+        layoutSubviews()
     }
 
     // MARK: Helper methods
 
     func layoutSubviews() {
-        self.dieView.frame = NSMakeRect(15, 15, (self.contentView.frame.width/2) - 15, self.contentView.frame.height - 30)
+        self.dieView.frame = NSMakeRect(15, 15, self.contentView.frame.width - 30, self.contentView.frame.height - 30)
     }
 }
