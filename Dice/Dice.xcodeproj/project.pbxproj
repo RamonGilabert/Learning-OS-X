@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6E225F11AF3E14E00125CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E225F01AF3E14E00125CA4 /* AppDelegate.swift */; };
+		F6E225F31AF3E14E00125CA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E225F21AF3E14E00125CA4 /* Images.xcassets */; };
+		F6E225F61AF3E14E00125CA4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E225F41AF3E14E00125CA4 /* MainMenu.xib */; };
+		F6E226021AF3E14E00125CA4 /* DiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E226011AF3E14E00125CA4 /* DiceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6E225FC1AF3E14E00125CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E225E31AF3E14E00125CA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6E225EA1AF3E14E00125CA4;
+			remoteInfo = Dice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6E225EB1AF3E14E00125CA4 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E225EF1AF3E14E00125CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E225F01AF3E14E00125CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6E225F21AF3E14E00125CA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6E225F51AF3E14E00125CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F6E225FB1AF3E14E00125CA4 /* DiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E226001AF3E14E00125CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E226011AF3E14E00125CA4 /* DiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6E225E81AF3E14E00125CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E225F81AF3E14E00125CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6E225E21AF3E14E00125CA4 = {
+			isa = PBXGroup;
+			children = (
+				F6E225ED1AF3E14E00125CA4 /* Dice */,
+				F6E225FE1AF3E14E00125CA4 /* DiceTests */,
+				F6E225EC1AF3E14E00125CA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6E225EC1AF3E14E00125CA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6E225EB1AF3E14E00125CA4 /* Dice.app */,
+				F6E225FB1AF3E14E00125CA4 /* DiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6E225ED1AF3E14E00125CA4 /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				F6E225F01AF3E14E00125CA4 /* AppDelegate.swift */,
+				F6E225F21AF3E14E00125CA4 /* Images.xcassets */,
+				F6E225F41AF3E14E00125CA4 /* MainMenu.xib */,
+				F6E225EE1AF3E14E00125CA4 /* Supporting Files */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
+		F6E225EE1AF3E14E00125CA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E225EF1AF3E14E00125CA4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6E225FE1AF3E14E00125CA4 /* DiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6E226011AF3E14E00125CA4 /* DiceTests.swift */,
+				F6E225FF1AF3E14E00125CA4 /* Supporting Files */,
+			);
+			path = DiceTests;
+			sourceTree = "<group>";
+		};
+		F6E225FF1AF3E14E00125CA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E226001AF3E14E00125CA4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6E225EA1AF3E14E00125CA4 /* Dice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E226051AF3E14E00125CA4 /* Build configuration list for PBXNativeTarget "Dice" */;
+			buildPhases = (
+				F6E225E71AF3E14E00125CA4 /* Sources */,
+				F6E225E81AF3E14E00125CA4 /* Frameworks */,
+				F6E225E91AF3E14E00125CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dice;
+			productName = Dice;
+			productReference = F6E225EB1AF3E14E00125CA4 /* Dice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6E225FA1AF3E14E00125CA4 /* DiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E226081AF3E14E00125CA4 /* Build configuration list for PBXNativeTarget "DiceTests" */;
+			buildPhases = (
+				F6E225F71AF3E14E00125CA4 /* Sources */,
+				F6E225F81AF3E14E00125CA4 /* Frameworks */,
+				F6E225F91AF3E14E00125CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6E225FD1AF3E14E00125CA4 /* PBXTargetDependency */,
+			);
+			name = DiceTests;
+			productName = DiceTests;
+			productReference = F6E225FB1AF3E14E00125CA4 /* DiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6E225E31AF3E14E00125CA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Ramon Gilabert";
+				TargetAttributes = {
+					F6E225EA1AF3E14E00125CA4 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F6E225FA1AF3E14E00125CA4 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F6E225EA1AF3E14E00125CA4;
+					};
+				};
+			};
+			buildConfigurationList = F6E225E61AF3E14E00125CA4 /* Build configuration list for PBXProject "Dice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6E225E21AF3E14E00125CA4;
+			productRefGroup = F6E225EC1AF3E14E00125CA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6E225EA1AF3E14E00125CA4 /* Dice */,
+				F6E225FA1AF3E14E00125CA4 /* DiceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6E225E91AF3E14E00125CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E225F31AF3E14E00125CA4 /* Images.xcassets in Resources */,
+				F6E225F61AF3E14E00125CA4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E225F91AF3E14E00125CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6E225E71AF3E14E00125CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E225F11AF3E14E00125CA4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E225F71AF3E14E00125CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E226021AF3E14E00125CA4 /* DiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6E225FD1AF3E14E00125CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6E225EA1AF3E14E00125CA4 /* Dice */;
+			targetProxy = F6E225FC1AF3E14E00125CA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6E225F41AF3E14E00125CA4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E225F51AF3E14E00125CA4 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6E226031AF3E14E00125CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6E226041AF3E14E00125CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F6E226061AF3E14E00125CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Dice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F6E226071AF3E14E00125CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Dice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F6E226091AF3E14E00125CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dice.app/Contents/MacOS/Dice";
+			};
+			name = Debug;
+		};
+		F6E2260A1AF3E14E00125CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dice.app/Contents/MacOS/Dice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6E225E61AF3E14E00125CA4 /* Build configuration list for PBXProject "Dice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E226031AF3E14E00125CA4 /* Debug */,
+				F6E226041AF3E14E00125CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6E226051AF3E14E00125CA4 /* Build configuration list for PBXNativeTarget "Dice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E226061AF3E14E00125CA4 /* Debug */,
+				F6E226071AF3E14E00125CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F6E226081AF3E14E00125CA4 /* Build configuration list for PBXNativeTarget "DiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E226091AF3E14E00125CA4 /* Debug */,
+				F6E2260A1AF3E14E00125CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6E225E31AF3E14E00125CA4 /* Project object */;
+}
