@@ -11,6 +11,7 @@
 		F6E225F31AF3E14E00125CA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E225F21AF3E14E00125CA4 /* Images.xcassets */; };
 		F6E225F61AF3E14E00125CA4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E225F41AF3E14E00125CA4 /* MainMenu.xib */; };
 		F6E226021AF3E14E00125CA4 /* DiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E226011AF3E14E00125CA4 /* DiceTests.swift */; };
+		F6E2260C1AF3E17600125CA4 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2260B1AF3E17600125CA4 /* MainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		F6E225FB1AF3E14E00125CA4 /* DiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E226001AF3E14E00125CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E226011AF3E14E00125CA4 /* DiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceTests.swift; sourceTree = "<group>"; };
+		F6E2260B1AF3E17600125CA4 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				F6E225F01AF3E14E00125CA4 /* AppDelegate.swift */,
+				F6E2260B1AF3E17600125CA4 /* MainWindowController.swift */,
 				F6E225F21AF3E14E00125CA4 /* Images.xcassets */,
-				F6E225F41AF3E14E00125CA4 /* MainMenu.xib */,
 				F6E225EE1AF3E14E00125CA4 /* Supporting Files */,
 			);
 			path = Dice;
@@ -84,6 +86,7 @@
 		F6E225EE1AF3E14E00125CA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6E225F41AF3E14E00125CA4 /* MainMenu.xib */,
 				F6E225EF1AF3E14E00125CA4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E2260C1AF3E17600125CA4 /* MainWindowController.swift in Sources */,
 				F6E225F11AF3E14E00125CA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

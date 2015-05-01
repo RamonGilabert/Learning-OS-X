@@ -1,27 +1,19 @@
-//
-//  AppDelegate.swift
-//  Dice
-//
-//  Created by Ramon Gilabert Llop on 5/1/15.
-//  Copyright (c) 2015 Ramon Gilabert. All rights reserved.
-//
-
 import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-
+    
+    var mainWindowController: MainWindowController?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        let window = NSWindow(contentRect: NSMakeRect(100, 100, 200, 200), styleMask: NSTitledWindowMask|NSResizableWindowMask|NSMiniaturizableWindowMask|NSClosableWindowMask, backing: NSBackingStoreType.Buffered, defer: false)
+        window.title = "New Window"
+        window.opaque = false
+        window.center()
+        window.movableByWindowBackground = true
+        window.makeKeyAndOrderFront(true)
+
+        self.mainWindowController = MainWindowController(window: window)
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 
