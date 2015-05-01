@@ -87,6 +87,9 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         self.removeButton.target = self
         self.removeButton.action = "onRemoveButtonPressed"
 
+        self.removeButton.enabled = false
+        self.boxContainer.hidden = true
+
         layoutFrameOfViews()
     }
 
@@ -128,6 +131,16 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
             checkBox.title = ""
             checkBox.integerValue = car.special!
             return checkBox
+        }
+    }
+
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        if self.tableView.selectedRow >= 0 {
+            self.removeButton.enabled = true
+            self.boxContainer.hidden = false
+        } else {
+            self.removeButton.enabled = false
+            self.boxContainer.hidden = true
         }
     }
 
