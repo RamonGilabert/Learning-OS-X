@@ -94,7 +94,6 @@ class Document: NSPersistentDocument, NSWindowDelegate, NSTableViewDelegate, NST
         let fetchRequest = NSFetchRequest(entityName: "Car")
         let arrayFetched = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil)!
         self.cars = NSMutableArray(array: arrayFetched)
-
         layoutFrameOfViews()
     }
 
